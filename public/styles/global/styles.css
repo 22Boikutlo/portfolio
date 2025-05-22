@@ -1,8 +1,107 @@
 /*Global styles for the application*/
- /*Projects container*/
- *{
+*{
     box-sizing: border-box;
- }
+}
+.container
+{
+    max-width: 1000px;
+    
+}
+/*navigation bar styles*/
+.navbar
+{
+    background-color: #333;
+    color: white;
+    text-align:left;
+    padding: 10px;
+    position:relative;
+    top: 0;
+    width: 100%;
+}
+.navbar a
+{
+    color: white;
+    text-decoration:dotted;
+}
+.navbar a:hover
+{
+    text-decoration:overline;
+    color:blue;
+    transition: color 0.2s;
+}
+.navbar ul
+{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+.navbar ul li
+{
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #d0d0d0;
+    list-style: none;
+    margin: 0 15px;
+    font-size: 20px;
+}
+/*About me styling*/
+ .about-me
+    {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        margin: 15px;
+        cursor: pointer;
+        width: 100%; 
+        height: 100%;
+        list-style: none;
+
+    }
+/*Skills styling*/
+ .skills 
+{  
+    background-color:  #f9f9f9;
+    padding: 20px;
+    flex: wrap;
+}
+    .skills-item
+    {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        margin: 15px;
+        cursor: pointer;
+        width: 100%; 
+        min-height: 216px;
+        list-style: none;
+
+    }
+    .skills-item:hover
+    {
+        background-color: #e0e0e0;
+        transform: translateY(-5px);
+        transition: transform 0.2s;
+    }
+    .skills-item li
+    {
+       list-style: none;
+    }
+    .skills-item:hover li
+    {
+        background-color: #e0e0e0;
+        transform: translateY(-5px);
+        transition: transform 0.2s;
+    }
+    .skills-item li:hover
+    {
+        background-color: #d0d0d0;
+        transform: translateX(-10px);
+        transition: transform 0.2s;
+    }
+
+/*Project Styling*/
 .projects 
 {  
     background-color: #f0f0f0;
@@ -27,12 +126,6 @@
     transform: translateY(-5px);
     transition: transform 0.2s;
 }
-.container
-{
-    max-width: 1000px;
-    
-}
-.myBtn{}
 
 
 /*Header styles*/
@@ -43,10 +136,28 @@
     color: white;
     text-align:left;
     padding: 10px;
-    position: fixed;
+    position:relative;
     bottom: 0;
     width: 100%;
-}   
+}
+.footer a
+{
+    color: white;
+    text-decoration:dotted;
+}
+.Footer a:hover
+{
+    text-decoration:line-through;
+    color: red;
+    transition: color 0.2s;
+}
+.profile
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+   
 /*Screen size adjustments*/
 @media (max-width: 768px) 
 {

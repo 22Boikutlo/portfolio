@@ -1,52 +1,54 @@
 import { Button, colors } from '@mui/material'
 import React from 'react'
+import {Swiper,SwiperSlide} from 'swiper/react'
 import "../../public/styles/global/styles.css"
 import "../../public/styles/bootstrap/bootstrap.grid.css";
+//import "../../public/images/ProfilePicture.jpeg";
+import AboutMe from '@/components/AboutMe';
+import Projects from '@/components/Projects';
 import Footer from '@/components/Footer';
+import Education from '@/components/Education';
+import Skills from '@/components/Skills';
+import Head from 'next/head';
 
 const projects = () => {
-  return (  
+  return   (  
     <>
-    <div>
-        <div className='projects'>  
-            <div className='container'> 
-                <h1>Projects</h1>
-                <p>Welcome to the projects page!</p>
-                <div className='row'>
-                    <div className='col-md-4'>                   
-                        <div className='project-item'>
-                            <h2>Store Management</h2>   
-                            <p>First Windows Forms application.Sql and C#</p>
-                            <Button variant="contained" color="primary" href="https://github.com/22Boikutlo/Portfolio-website">View Project</Button>
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div className='project-item'>
-                            <h2>Plumbing Website</h2>
-                            <p>LPS website showcasing their work and contact info.</p>
-                            <Button variant="contained" color="primary" href="https://github.com/22Boikutlo/Portfolio-website">View Project</Button>        
-                        </div>
-                    </div>
-                    <div className='col-md-4'>
-                        <div className='project-item'>
-                            <h2>Portfolio Website</h2>   
-                            <p>showcasing my skills and contact information</p>
-                            <Button variant="contained" color="primary" href="https://github.com/22Boikutlo/Portfolio-website">View Project</Button>
-                        </div>
-                    </div>    
+        <Head>
+            <title>Boikutlo Shaun Rampora</title>
+            <meta name="description" content="A brief description of the page's content."/>
+            <meta name="keywords" content="Software Developer, keyword2, keyword3"/>
+            <meta name="robots" content="index, follow"/>
+        </Head>
+        <div>
+            <nav className='navbar'>
+                <div className='container'>
+                    <h1>Boikutlo Rampora</h1>
+                    <ul>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#education">Education</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
                 </div>
-
-            </div>     
+            </nav>
+            <div>
+                <AboutMe/>        
+            </div>
+            <div>
+                <Education/>
+            </div>
+            <div>
+                <Skills/>
+            </div>
+            <div>
+                <Projects/>
+            </div>
+            <div>
+                <Footer/>  
+            </div>
         </div>
-
-        <div className='contact'>
-            <p>Boikutlo Rampora</p>
-            <p>Contact: <a href="mailto:boikutlo.rampora@fananetworks.co.za">Boikutlo Rampora Email</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/boikutlo-shaun-rampora-7b7914167">Boikutlo Rampora LinkedIn</a></p>
-            <p>GitHub: <a href="https://github.com/22Boikutlo/Portfolio-website">Boikutlo Rampora GitHub</a></p>
-        </div>
-        <Footer/>  
-    </div>
     </>    
   )
 }
