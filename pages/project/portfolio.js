@@ -11,19 +11,19 @@ import Education from '@/components/Education';
 import Skills from '@/components/Skills';
 import Head from 'next/head';
 
+
 const projects = () => {
   return   (  
     <>
         <Head>
             <title>Boikutlo Shaun Rampora</title>
-            <meta name="description" content="A brief description of the page's content."/>
+            <meta name="description" content="This is my portfolio website showcasing all the projects I have worked and programming and soft skills I acquired over the years."/>
             <meta name="keywords" content="Software Developer, keyword2, keyword3"/>
             <meta name="robots" content="index, follow"/>
         </Head>
         <div>
             <nav className='navbar'>
                 <div className='container'>
-                    <h1>Boikutlo Rampora</h1>
                     <ul>
                         <li><a href="#about">About Me</a></li>
                         <li><a href="#education">Education</a></li>

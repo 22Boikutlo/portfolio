@@ -12,6 +12,8 @@
 {
     background-color: #333;
     color: white;
+
+    
     text-align:left;
     padding: 10px;
     position:relative;
@@ -20,13 +22,13 @@
 }
 .navbar a
 {
-    color: white;
+    color: red;
     text-decoration:dotted;
 }
 .navbar a:hover
 {
     text-decoration:overline;
-    color:blue;
+    color:#d0d0d0;
     transition: color 0.2s;
 }
 .navbar ul
@@ -39,10 +41,16 @@
 {
     border: 1px solid #333;
     border-radius: 5px;
-    background-color: #d0d0d0;
+    /*background-color: #d0d0d0;*/
     list-style: none;
     margin: 0 15px;
-    font-size: 20px;
+    font-size: 30px;
+}
+.navbar ul li:hover
+{
+    background-color: #e0e0e0;
+    transform: translateY(-5px);
+    transition: transform 0.2s;
 }
 /*About me styling*/
  .about-me
@@ -56,7 +64,39 @@
         width: 100%; 
         height: 100%;
         list-style: none;
+        font-style: italic;
 
+    }
+/*education styling*/
+ .education
+    {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        margin: 15px;
+        cursor: pointer;
+        width: 100%; 
+        height: 100%;
+        list-style: none;
+
+    }
+ .education-item
+    {
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        margin: 15px;
+        cursor: pointer;
+        width: 100%; 
+        min-height: 216px;
+    }
+    .education-item:hover
+    {
+        background-color: #e0e0e0;
+        transform: translateY(-5px);
+        transition: transform 0.2s;
     }
 /*Skills styling*/
  .skills 
@@ -151,7 +191,36 @@
     color: red;
     transition: color 0.2s;
 }
+.text-field label {
+  color: red !important;
+}
+
+.text-field .MuiInputBase-input {
+  color: white !important;
+}
+
+.text-field .MuiInput-underline:before {
+  border-bottom: 1px solid white !important;
+}
+
+.text-field .MuiInput-underline:hover:not(.Mui-disabled):before {
+  border-bottom: 1px solid red !important;
+}
+
+.text-field .MuiInput-underline:after {
+  border-bottom: 1px solid red !important;
+}
+.myBtn{
+    margin-top: 5px !important;
+}
+
 .profile
+{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+.icon
 {
     width: 100%;
     height: 100%;

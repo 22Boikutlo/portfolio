@@ -1,6 +1,7 @@
 import { Button } from '@mui/material'
 import React from 'react'
 import { GitHub,Email, LinkedIn, Phone } from '@mui/icons-material'
+import {TextField} from '@mui/material'
 
 
 const Footer = () => {
@@ -28,24 +29,21 @@ const Footer = () => {
     }
   return (
     <>
-        <div className='footer'>
+        <div className='footer'id='contact'>
             <div className='container'>
                 <div className='row'>
                     <div className='col-md-6'>
                         
                         <h2>Should you have any business or queries</h2>
-                        <form>
-                            <div className='form-group'>
-                                <label htmlFor="name">Name:</label>
-                                <input type="text" id="name" name="name" required />
+                        <form className='text-field'>
+                            <div className='form-group'>                               
+                                <TextField id="name" label="Name"   variant="standard"  />
+                            </div>
+                            <div className='form-group'>                              
+                                <TextField id="email" label="Email"  variant="standard" />
                             </div>
                             <div className='form-group'>
-                                <label htmlFor="email">Email:</label>
-                                <input type="email" id="email" name="email" required />
-                            </div>
-                            <div className='form-group'>
-                                <label htmlFor="message">Message:</label>
-                                <textarea id="message" name="message" required></textarea>
+                                <TextField id="message" label="Message" variant="standard" rows={4} multiline/>                                
                             </div>               
                         </form>
                         <Button variant="contained" className='myBtn' color="primary" onClick={handleSubmit}>Submit</Button>

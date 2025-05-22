@@ -8,6 +8,7 @@ import 'swiper/css/scrollbar'
 import 'swiper/css/a11y'
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules'
 
+
 const Skills = () => {
     const getSlidesView = () => {
         if (typeof window !== "undefined") {
@@ -44,7 +45,7 @@ const Skills = () => {
                             <div className='skills-item'>
                                 <h2>Programming Languages</h2>
                                 <ul>
-                                    <li>C#</li>
+                                    <li><a src="../public/images.c#.png " ></a>C#</li>
                                     <li>Python</li>
                                     <li>JavaScript</li>
                                     <li>HTML/CSS</li>
@@ -138,15 +139,7 @@ const Skills = () => {
                                     </ul>
                                 </div>
                         </SwiperSlide>
-                        <SwiperSlide>
-                                <div className='skills-item'>
-                                    <h2>Operating Systems</h2>
-                                    <ul>
-                                        <li>Windows</li>
-                                        <li>Linux</li>
-                                    </ul>
-                                </div>
-                        </SwiperSlide>
+                        
                        <SwiperSlide>
                                 <div className='skills-item'>
                                     <h2>Certifications</h2>

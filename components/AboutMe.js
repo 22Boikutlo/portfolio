@@ -7,7 +7,7 @@ const AboutMe = () => {
     <>
         <div id = 'about'>
           <div className='about-me'>
-              <div className='skills'>
+            <div className='skills'>
             <div className='container'>
               <div className='row'>
                 <div className='col-md-6'>
