@@ -1,7 +1,21 @@
 import React from 'react';
 import { Button } from '@mui/material';
+import { useEffect, useState } from 'react';
 
 function Projects() {
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        async function fetchProjects() {
+            try {
+                const res = await fetch('https://localhost:44347/api/Project');
+                const data = await res.json();
+                setProjects({first:data[0], second:data[1], third:data[2]});
+            } catch (error) {
+                console.error('Failed to fetch projects:', error);
+            }
+        }
+        fetchProjects();
+    }, []);
   return (
     <div id="projects" className="projects">
       <div className="container">
@@ -10,8 +24,8 @@ function Projects() {
 
           <div className="col-md-4">
             <div className="project-item">
-              <h2>Store Management</h2>
-              <p>First Windows Forms application using SQL and C#.</p>
+              <h2>{projects.first?.ProjectName}</h2>
+              <p>{projects.first?.ProjectDescription}</p>
               <Button
                 variant="contained"
                 color="primary"
@@ -21,38 +35,41 @@ function Projects() {
               >
                 View Project
               </Button>
+              {/*<p>{projects.first?.Languages}</p>*/}
             </div>
           </div>
 
           <div className="col-md-4">
             <div className="project-item">
-              <h2>Plumbing Website</h2>
-              <p>LPS website showcasing their work and contact information.</p>
+              <h2>{projects.second?.ProjectName}</h2>
+              <p>{projects.second?.ProjectDescription}</p>
               <Button
                 variant="contained"
                 color="primary"
-                href="https://github.com/22Bohloko/LPS-Website"
+                href={projects.second?.ProjectURL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View Project
               </Button>
+              {/*<p>{projects.second?.Languages}</p>*/}
             </div>
           </div>
 
           <div className="col-md-4">
             <div className="project-item">
-              <h2>Portfolio Website</h2>
-              <p>Showcasing my skills and contact information.</p>
+              <h2>{projects.third?.ProjectName}</h2>
+              <p>{projects.third?.ProjectDescription}</p>
               <Button
                 variant="contained"
                 color="primary"
-                href="https://github.com/22Boikutlo/Portfolio-website"
+                href={projects.third?.ProjectURL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View Project
               </Button>
+              {/*<p>{projects.third?.Languages}</p>*/}
             </div>
           </div>
 

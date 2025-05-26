@@ -5,8 +5,22 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { useEffect, useState } from 'react';
 
 const Skills = () => {
+  const { skills, setSkills } = useState(null);
+  useEffect(() => {
+    async function fetchSkills() {
+      try {
+        const res = await fetch('https://localhost:44347/api/Skills');
+        const data = await res.json();
+        setSkills({ first: data[0], second: data[1], third: data[2], fourth: data[3], fifth: data[4], sixth: data[5], seventh: data[6], eighth: data[7], ninth: data[8], tenth: data[9], eleventh: data[10], twelfth: data[11], thirteenth: data[12], fourteenth: data[13], fifteenth: data[14] });
+      } catch (error) {
+        console.error('Failed to fetch skills data:', error);
+      }
+    }
+    fetchSkills();
+  }, []);
   return (
     <div id="skills" className="skills">
       <div className="container">
@@ -27,7 +41,7 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Programming Languages</h2>
               <ul>
-                <li>C#</li>
+                <li>React</li>
                 <li>Python</li>
                 <li>JavaScript</li>
                 <li>HTML/CSS</li>
@@ -39,7 +53,7 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Frameworks</h2>
               <ul>
-                <li>React</li>
+                <li>{skills.first?.}</li>
                 <li>Node.js</li>
                 <li>Next.js</li>
                 <li>ASP.NET Core</li>
