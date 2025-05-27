@@ -1,0 +1,274 @@
+/* Global styles and variables */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-bg: #333;
+    --light-bg: #f9f9f9;
+    --mid-bg: #f0f0f0;
+    --hover-bg: #e0e0e0;
+    --accent: red;
+    --text-light: white;
+    --text-dark: black;
+    --border-radius: 10px;
+    --transition: transform 0.2s, color 0.2s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 100%;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+/* Navigation bar styles */
+.navbar {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: left;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.navbar a {
+    color: var(--accent);
+    text-decoration: dotted;
+}
+
+.navbar a:hover {
+    text-decoration: overline;
+    color: var(--hover-bg);
+    transition: var(--transition);
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+.navbar ul li {
+    border: 1px solid var(--dark-bg);
+    border-radius: 5px;
+    background-color: var(--hover-bg);
+    list-style: none;
+    margin: 0 15px;
+    font-size: 30px;
+}
+
+.navbar ul li:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+/* About Me Styling */
+.about-me {
+    background-color: var(--mid-bg);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    font-style: italic;
+}
+
+/* Education Styling */
+.education {
+    background-color: var(--mid-bg);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    
+    margin: 15px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+}
+
+.education-item {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 216px;
+}
+
+.education-item:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+/* Skills Styling */
+.skills {
+    background-color: var(--light-bg);
+    padding: 20px;
+    flex: wrap;
+}
+
+.skills-item {
+    background-color: var(--mid-bg);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 216px;
+    list-style: none;
+}
+
+.skills-item:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+.skills-item li {
+    list-style: none;
+}
+
+.skills-item:hover li {
+    background-color: var(--hover-bg);
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+
+.skills-item li:hover {
+    background-color: var(--hover-bg);
+    transform: translateX(-10px);
+    transition: var(--transition);
+}
+/*End of Skills Styling */
+
+/* Projects Styling */
+.projects {
+    background-color: var(--mid-bg);
+    padding: 20px;
+    flex: wrap;
+}
+
+.project-item {
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 10px;
+    text-align: center;
+    margin: 15px;
+    cursor: pointer;
+    width: 100%;
+    min-height: 216px;
+}
+
+.project-item:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-5px);
+    transition: var(--transition);
+}
+/* End of Projects Styling */
+
+/* Footer styles */
+.footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    text-align: left;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a {
+    color: var(--text-light);
+    text-decoration: dotted;
+}
+
+.footer a:hover {
+    text-decoration: line-through;
+    color: var(--accent);
+    transition: var(--transition);
+}
+
+/* Material UI text fields */
+.text-field label {
+    color: var(--accent) !important;
+}
+
+.text-field .MuiInputBase-input {
+    color: var(--text-light) !important;
+}
+
+.text-field .MuiInput-underline:before {
+    border-bottom: 1px solid var(--text-light) !important;
+}
+
+.text-field .MuiInput-underline:hover:not(.Mui-disabled):before {
+    border-bottom: 1px solid var(--accent) !important;
+}
+
+.text-field .MuiInput-underline:after {
+    border-bottom: 1px solid var(--accent) !important;
+}
+
+/* Other elements */
+.myBtn {
+    margin-top: 5px !important;
+}
+
+.profile,
+.icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar ul li {
+        margin: 10px 0;
+        font-size: 24px;
+    }
+
+    .about-me, .skills, .projects, .education {
+        padding: 10px;
+    }
+
+    .projects {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-item {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    body {
+        font-size: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+}
