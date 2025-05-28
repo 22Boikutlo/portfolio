@@ -4,16 +4,18 @@ import Image from 'next/image';
 const AboutMe = () => {
   const [owner, setOwner] = useState(null);
 
-  useEffect(() => {
-    async function fetchOwner() {
-      try {
-        const res = await fetch('https://localhost:44347/api/Owner/1003');
-        const data = await res.json();
-        setOwner(data[0]);
-      } catch (error) {
-        console.error('Failed to fetch owner data:', error);
-      }
+  async function fetchOwner() {
+    try {
+      const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/Owner/1003');
+      const data = await res.json();
+      setOwner(data[0]);
+    } catch (error) {
+      alert('Failed to fetch owner data. Please try again later.');
+      // Optionally log the error for debugging
+      console.error('Failed to fetch owner data:');
     }
+  }
+  useEffect(() => {
 
     fetchOwner();
   }, []);

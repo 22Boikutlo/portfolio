@@ -9,12 +9,13 @@ const Education = () => {
     useEffect(() => {
         async function fetchEducation() {
             try {
-                const res = await fetch('https://localhost:44347/api/Education');
+                const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/Education');
                 const data = await res.json();
                 setEducation({ first: data[0], second: data[1] });
                 // assuming API returns an array and you want the first and second entries
             } catch (error) {
-                console.error('Failed to fetch education data:', error);
+              alert('Failed to fetch education data. Please try again later.');
+                console.error('Failed to fetch education data:');
             }
         }
         fetchEducation();

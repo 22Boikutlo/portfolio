@@ -10,11 +10,13 @@ const Footer = () => {
     useEffect(() => {
         async function fetchContact() {
             try {
-                const res = await fetch('https://localhost:44347/api/Owner/1003');
+                const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/Owner/1003');
                 const data = await res.json();
                 setContact(data[0]); // assuming API returns an array and you want the first
             } catch (error) {
-                console.error('Failed to fetch contact data:', error);
+                alert('Failed to fetch contact data. Please try again later.');
+                // Optionally log the error for debugging
+                console.error('Failed to fetch contact data:');
             }
         }
         fetchContact();
