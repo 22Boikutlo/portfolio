@@ -52,15 +52,15 @@ const Footer = () => {
                     <div className='col-md-6'>
                         
                         <h2>Should you have any business or queries</h2>
-                        <form className='text-field'>
+                        <form className='text-field' action={contact.EmailURL} method="POST">
                             <div className='form-group'>                               
-                                <TextField id="name" label="Name"   variant="standard"  />
+                                <TextField id="name" label="Name"   variant="standard" required  />
                             </div>
                             <div className='form-group'>                              
-                                <TextField id="email" label="Email"  variant="standard" />
+                                <TextField id="email" label="Email"  variant="standard" required />
                             </div>
                             <div className='form-group'>
-                                <TextField id="message" label="Message" variant="standard" rows={4} multiline/>                                
+                                <TextField id="message" label="Message" variant="standard" required rows={4} multiline/>                                
                             </div>               
                         </form>
                         <Button variant="contained" className='myBtn' color="primary" onClick={handleSubmit}>Submit</Button>
