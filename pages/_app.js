@@ -2,6 +2,7 @@ import "../public/styles/bootstrap/bootstrap.grid.css"
 import { createTheme,ThemeProvider } from '@mui/material';
 import { useState, useEffect } from 'react';
 import Head from 'next/head';
+import '../public/styles/global/styles.css'
 
 
 const theme = createTheme({

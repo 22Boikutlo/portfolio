@@ -6,7 +6,7 @@ import SkillsApi from '@/components/SkillsApi';
 import ProjectApi from '@/components/ProjectApi';
 import Footers from '@/components/Footers';
 
-import '../public/styles/global/styles.css';
+;
 
 export default function Home() {
   return (
