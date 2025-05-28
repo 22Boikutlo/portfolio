@@ -7,7 +7,7 @@ function Projects() {
     useEffect(() => {
         async function fetchProjects() {
             try {
-                const res = await fetch('https://localhost:44347/api/Project');
+                const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Project');
                 const data = await res.json();
                 setProjects({first:data[0], second:data[1], third:data[2]});
             } catch (error) {

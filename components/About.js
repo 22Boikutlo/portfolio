@@ -6,7 +6,7 @@ const AboutMe = () => {
 
   async function fetchOwner() {
     try {
-      const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/Owner/1003');
+      const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Owner/1003');
       const data = await res.json();
       setOwner(data[0]);
     } catch (error) {

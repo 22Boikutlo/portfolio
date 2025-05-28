@@ -9,7 +9,7 @@ const Education = () => {
     useEffect(() => {
         async function fetchEducation() {
             try {
-                const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/Education');
+                const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Education');
                 const data = await res.json();
                 setEducation({ first: data[0], second: data[1] });
                 // assuming API returns an array and you want the first and second entries

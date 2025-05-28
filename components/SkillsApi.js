@@ -12,7 +12,7 @@ const Skills = () => {
   useEffect(() => {
     async function fetchSkills() {
       try {
-        const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/skills');
+        const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/skills');
         const data = await res.json();
         setSkills({first: data[0], second: data[1], third: data[2], 
           fourth: data[3], fifth: data[4], sixth: data[5], seventh: data[6], eighth: data[7], ninth: data[8], tenth: data[9], eleventh: data[10], twelfth: data[11], thirteenth: data[12], fourteenth: data[13], fifteenth: data[14] });
