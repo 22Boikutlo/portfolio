@@ -15,7 +15,7 @@ const Skills = () => {
         const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/skills');
         const data = await res.json();
         setSkills({first: data[0], second: data[1], third: data[2], 
-          fourth: data[3], fifth: data[4], sixth: data[5], seventh: data[6], eighth: data[7], ninth: data[8], tenth: data[9], eleventh: data[10], twelfth: data[11], thirteenth: data[12], fourteenth: data[13], fifteenth: data[14] });
+          fourth: data[3], fifth: data[4], sixth: data[5], seventh: data[6], eighth: data[7], ninth: data[8], tenth: data[9], eleventh: data[10], twelfth: data[11], thirteenth: data[12], fourteenth: data[13], fifteenth: data[14], sixteenth: data[15], seventeenth: data[16], eighteenth: data[17], nineteenth: data[18], twentieth: data[19], twentyfirst: data[20], twentysecond: data[21], twentythird: data[22], twentyfourth: data[23], twentyfifth: data[24], twentysixth: data[25], twentyseventh: data[26], twentyeighth: data[27], twentyninth: data[28], thirtieth: data[29]});
       } catch (error) {
         alert('Failed to fetch skills data. Please try again later.');
         // Optionally log the error for debugging
@@ -45,9 +45,10 @@ const Skills = () => {
               <h2>Languages</h2>
               <ul>
                 <li>{skills.first?.SkillName}</li>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>HTML/CSS</li>
+                <li>{skills.forth?.SkillName}</li>
+                <li>{skills.third?.SkillName}JavaScript</li>
+                <li>{skills.fifth?.SkillName}/CSS</li>
+                <li>{skills.sixth?.SkillName}HTML</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -57,10 +58,10 @@ const Skills = () => {
               <h2>Frameworks</h2>
               <ul>
                 <li>C#</li>
-                <li>Node.js</li>
-                <li>Next.js</li>
-                <li>ASP.NET Core</li>
-                <li>Entity Framework</li>
+                <li>{skills.seventh?.SkillName}Node.js</li>
+                <li>{skills.eighth?.SkillName}Next.js</li>
+                <li>{skills.ninth?.SkillName}ASP.NET Core</li>
+                <li>{skills.tenth?.SkillName}Entity Framework</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -69,7 +70,7 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Databases</h2>
               <ul>
-                <li>MS SQL</li>
+                <li>{skills.eleventh?.SkillName}MS SQL</li>
                 <li>MySQL</li>
               </ul>
             </div>
@@ -79,9 +80,9 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Tools & Technologies</h2>
               <ul>
-                <li>Git</li>
+                <li>{skills.twelfth?.SkillName}Git</li>
                 <li>Docker</li>
-                <li>Azure</li>
+                <li>{skills.thirteenth?.SkillName}Azure</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -90,8 +91,8 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Methodologies</h2>
               <ul>
-                <li>Agile</li>
-                <li>Scrum</li>
+                <li>{skills.fourteenth?.SkillName}Agile</li>
+                <li>{skills.fifteenth?.SkillName}Scrum</li>
                 <li>Waterfall</li>
               </ul>
             </div>
@@ -101,8 +102,8 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Operating Systems</h2>
               <ul>
-                <li>Windows</li>
-                <li>Linux</li>
+                <li>{skills.sixteenth?.SkillName}Windows</li>
+                <li>{skills.seventeenth?.SkillName}Linux</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -111,12 +112,12 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Dev Environments</h2>
               <ul>
-                <li>Visual Studio</li>
-                <li>VS Code</li>
-                <li>SSMS</li>
-                <li>GitHub</li>
-                <li>Teams, Zoom</li>
-                <li>Figma, Canva</li>
+                <li>{skills.eighteenth?.SkillName}Visual Studio</li>
+                <li>{skills.nineteenth?.SkillName}VS Code</li>
+                <li>{skills.twentieth?.SkillName}SSMS</li>
+                <li>{skills.twentyfirst?.SkillName}GitHub</li>
+                <li>{skills.twentysecond?.SkillName} & {skills.twentythird?.SkillName}Teams, Zoom</li>
+                <li>{skills.twentyfourth?.SkillName} & {skills.twentyfifth?.SkillName}Figma, Canva</li>
                 <li>Notepad++</li>
               </ul>
             </div>
