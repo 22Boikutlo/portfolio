@@ -46,9 +46,9 @@ const Skills = () => {
               <ul>
                 <li>{skills.first?.SkillName}</li>
                 <li>{skills.forth?.SkillName}</li>
-                <li>{skills.third?.SkillName}JavaScript</li>
-                <li>{skills.fifth?.SkillName}/CSS</li>
-                <li>{skills.sixth?.SkillName}HTML</li>
+                <li>{skills.third?.SkillName}</li>
+                <li>{skills.fifth?.SkillName}</li>
+                <li>{skills.sixth?.SkillName}</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -57,11 +57,10 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Frameworks</h2>
               <ul>
-                <li>C#</li>
-                <li>{skills.seventh?.SkillName}Node.js</li>
-                <li>{skills.eighth?.SkillName}Next.js</li>
-                <li>{skills.ninth?.SkillName}ASP.NET Core</li>
-                <li>{skills.tenth?.SkillName}Entity Framework</li>
+                <li>{skills.seventh?.SkillName}</li>
+                <li>{skills.eighth?.SkillName}</li>
+                <li>{skills.ninth?.SkillName}</li>
+                <li>{skills.tenth?.SkillName}</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -70,7 +69,7 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Databases</h2>
               <ul>
-                <li>{skills.eleventh?.SkillName}MS SQL</li>
+                <li>{skills.eleventh?.SkillName}</li>
                 <li>MySQL</li>
               </ul>
             </div>
@@ -80,9 +79,9 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Tools & Technologies</h2>
               <ul>
-                <li>{skills.twelfth?.SkillName}Git</li>
+                <li>{skills.twelfth?.SkillName}</li>
                 <li>Docker</li>
-                <li>{skills.thirteenth?.SkillName}Azure</li>
+                <li>{skills.thirteenth?.SkillName}</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -91,9 +90,8 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Methodologies</h2>
               <ul>
-                <li>{skills.fourteenth?.SkillName}Agile</li>
-                <li>{skills.fifteenth?.SkillName}Scrum</li>
-                <li>Waterfall</li>
+                <li>{skills.fourteenth?.SkillName}</li>
+                <li>{skills.fifteenth?.SkillName}</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -102,8 +100,8 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Operating Systems</h2>
               <ul>
-                <li>{skills.sixteenth?.SkillName}Windows</li>
-                <li>{skills.seventeenth?.SkillName}Linux</li>
+                <li>{skills.sixteenth?.SkillName}</li>
+                <li>{skills.seventeenth?.SkillName}</li>
               </ul>
             </div>
           </SwiperSlide>
@@ -112,12 +110,12 @@ const Skills = () => {
             <div className="skills-item">
               <h2>Dev Environments</h2>
               <ul>
-                <li>{skills.eighteenth?.SkillName}Visual Studio</li>
-                <li>{skills.nineteenth?.SkillName}VS Code</li>
-                <li>{skills.twentieth?.SkillName}SSMS</li>
-                <li>{skills.twentyfirst?.SkillName}GitHub</li>
-                <li>{skills.twentysecond?.SkillName} & {skills.twentythird?.SkillName}Teams, Zoom</li>
-                <li>{skills.twentyfourth?.SkillName} & {skills.twentyfifth?.SkillName}Figma, Canva</li>
+                <li>{skills.eighteenth?.SkillName}</li>
+                <li>{skills.nineteenth?.SkillName}</li>
+                <li>{skills.twentieth?.SkillName}</li>
+                <li>{skills.twentyfirst?.SkillName}</li>
+                <li>{skills.twentysecond?.SkillName} & {skills.twentythird?.SkillName}</li>
+                <li>{skills.twentyfourth?.SkillName} & {skills.twentyfifth?.SkillName}</li>
                 <li>Notepad++</li>
               </ul>
             </div>

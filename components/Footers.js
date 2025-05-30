@@ -22,28 +22,7 @@ const Footer = () => {
         fetchContact();
     }, []);
     if (!contact) return <p>Loading...</p>;
-    const handleSubmit = (event) => {
-        const name = document.getElementById("name").value;
-        const email = document.getElementById("email").value;
-        const message = document.getElementById("message").value;
-        if(name === "")
-            {
-                alert("Please enter your name");
-                return;
-            }
-        if(email === "")
-            {
-                alert("Please enter your email");
-                return;
-            }
-        if(message === "")
-            {
-                alert("Please enter your message");
-                return;
-            }            
-        alert("Form submitted successfully!")
-        ;
-    }
+    
   return (
     <>
         <div className='footer'id='contact'>
@@ -54,7 +33,7 @@ const Footer = () => {
                         <h2>Should you have any business or queries</h2>
                         <form className='text-field' action={contact.EmailURL} method="POST">
                             <div className='form-group'>                               
-                                <TextField id="name" label="Name"   variant="standard" required  />
+                                <TextField id="name" label="Name"   variant="standard" alert:required  />
                             </div>
                             <div className='form-group'>                              
                                 <TextField id="email" label="Email"  variant="standard" required />
