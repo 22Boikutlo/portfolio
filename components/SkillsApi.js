@@ -6,6 +6,9 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { useEffect, useState } from 'react';
+import { Button } from '@mui/material';
+import Link from 'next/link';
+
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
@@ -28,6 +31,11 @@ const Skills = () => {
     <div id="skills" className="skills">
       <div className="container">
         <h1>Skills</h1>
+        <Link href="/add-skill">
+          <Button variant="contained" className='myBtn' color="primary"  >
+            Add Skill
+          </Button>        
+      </Link>
 
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}

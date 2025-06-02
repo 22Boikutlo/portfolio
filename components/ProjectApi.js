@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 function Projects() {
     const [projects, setProjects] = useState([]);
@@ -20,6 +21,11 @@ function Projects() {
     <div id="projects" className="projects">
       <div className="container">
         <h1>Projects</h1>
+        <Link href="/add-project">
+          <Button variant="contained" className='myBtn' color="primary"  >
+            Add Project
+          </Button>        
+      </Link>
         <div className="row">
 
           <div className="col-md-4">

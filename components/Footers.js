@@ -22,6 +22,13 @@ const Footer = () => {
         fetchContact();
     }, []);
     if (!contact) return <p>Loading...</p>;
+
+    // Add handleSubmit function
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // You can add form submission logic here
+        alert('Form submitted!');
+    };
     
   return (
     <>
@@ -33,7 +40,7 @@ const Footer = () => {
                         <h2>Should you have any business or queries</h2>
                         <form className='text-field' action={contact.EmailURL} method="POST">
                             <div className='form-group'>                               
-                                <TextField id="name" label="Name"   variant="standard" alert:required  />
+                                <TextField id="name" label="Name"   variant="standard" required  />
                             </div>
                             <div className='form-group'>                              
                                 <TextField id="email" label="Email"  variant="standard" required />
