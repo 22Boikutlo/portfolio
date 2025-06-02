@@ -35,13 +35,12 @@ function Projects() {
               <Button
                 variant="contained"
                 color="primary"
-                href="https://github.com/22Boikutlo/Store-Management"
+                href={projects.first?.ProjectURL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 View Project
               </Button>
-              {/*<p>{projects.first?.Languages}</p>*/}
             </div>
           </div>
 
@@ -57,8 +56,7 @@ function Projects() {
                 rel="noopener noreferrer"
               >
                 View Project
-              </Button>
-              {/*<p>{projects.second?.Languages}</p>*/}
+              </Button>             
             </div>
           </div>
 
@@ -75,7 +73,6 @@ function Projects() {
               >
                 View Project
               </Button>
-              {/*<p>{projects.third?.Languages}</p>*/}
             </div>
           </div>
 
