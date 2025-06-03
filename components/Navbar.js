@@ -1,26 +1,46 @@
-import Link from 'next/link';
+import { useState } from 'react';
+import Head from 'next/head';
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(prev => !prev);
+  };
+
   return (
-    <nav className="navbar navbar-expand-sm bg-light navbar-light fixed-top">
-      <ul className="navbar-nav mx-auto">
-        <li className="nav-item m-1">
-          <a className="btn btn-light btn-outline-primary" href="#aboutme">About Me</a>
-        </li>
-        <li className="nav-item m-1">
-          <a className="btn btn-light btn-outline-primary" href="#education">Education</a>
-        </li>
-        <li className="nav-item m-1">
-          <a className="btn btn-light btn-outline-primary" href="#skills">Skills</a>
-        </li>
-        <li className="nav-item m-1">
-          <a className="btn btn-light btn-outline-primary" href="#projects">Projects</a>
-        </li>
-        <li className="nav-item m-1">
-          <a className="btn btn-light btn-outline-primary" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+      </Head>
+
+      <nav className="navbar navbar-expand-md bg-light navbar-light fixed-top shadow-sm">
+        <div className="container-fluid">
+          <div className="topNav d-flex justify-content-between w-100">
+            <div className={`myLinks ${menuOpen ? 'd-block' : 'd-none'} d-md-flex`}>
+              <a className="btn btn-light btn-outline-primary m-1" href="#aboutme">About Me</a>
+              <a className="btn btn-light btn-outline-primary m-1" href="#education">Education</a>
+              <a className="btn btn-light btn-outline-primary m-1" href="#skills">Skills</a>
+              <a className="btn btn-light btn-outline-primary m-1" href="#projects">Projects</a>
+              <a className="btn btn-light btn-outline-primary m-1" href="#contact">Contact</a>
+            </div>
+
+            <button
+              onClick={toggleMenu}
+              className="menu-button"
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+              aria-controls="navbarMenu"
+            >
+              <i className="fa fa-bars"></i>
+          </button>
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 
