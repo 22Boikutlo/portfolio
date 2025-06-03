@@ -53,12 +53,13 @@ section {
 
 .navbar .topNav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
 .navbar .myLinks {
-  display: none;
+  display: inline-block;
 }
 
 .navbar .myLinks a {
@@ -280,8 +281,7 @@ section {
   height: 100%;
 }
 
-/* Responsive Adjustments
-   */
+/* Responsive Adjustments*/
 @media (min-width: 768px) {
   body {
     font-size: 90%;
@@ -313,3 +313,4 @@ section {
   }
 }
 /* Show links on medium+ screens */
+

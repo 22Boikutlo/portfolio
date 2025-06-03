@@ -74,7 +74,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="col-md-6">
+          <div className="col-md-6 ">
             <h2>Contact Information</h2>
             <p>Boikutlo Rampora</p>
             <p>

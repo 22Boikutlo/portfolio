@@ -24,15 +24,15 @@ const AboutMe = () => {
 
   return (
     <div id="about" className="about-me">
-      <div className="skills">
+     
         <div className="container">
-          <div className="row align-items-center">
-           <div className="col-md-6 text-center">
+          <div className="row">
+           <div className="col-md-6">
               <Image
                 src={`/images/${owner.ProfilePicture || 'ProfilePicture.jpeg'}`}
                 alt={`${owner.FirstName} ${owner.LastName}`}
-                width={300}
-                height={300}
+                width={200}
+                height={200}
                 className="rounded-circle profile"
               />
             </div>
@@ -43,7 +43,7 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-      </div>
+     
     </div>
   );
 };

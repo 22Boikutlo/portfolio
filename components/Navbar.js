@@ -26,6 +26,8 @@ const Navbar = () => {
               <a className="btn btn-light btn-outline-primary m-1" href="#skills">Skills</a>
               <a className="btn btn-light btn-outline-primary m-1" href="#projects">Projects</a>
               <a className="btn btn-light btn-outline-primary m-1" href="#contact">Contact</a>
+               <a className="btn btn-light btn-outline-primary m-1" href="#signin">Signin</a>
+              <a className="btn btn-light btn-outline-primary m-1 align-left" href="#signup">Signup</a>
             </div>
 
             <button
