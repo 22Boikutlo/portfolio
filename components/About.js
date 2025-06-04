@@ -31,8 +31,8 @@ const AboutMe = () => {
               <Image
                 src={`/images/${owner.ProfilePicture || 'ProfilePicture.jpeg'}`}
                 alt={`${owner.FirstName} ${owner.LastName}`}
-                width={200}
-                height={200}
+                width={90}
+                height={90}
                 className="rounded-circle profile"
               />
             </div>

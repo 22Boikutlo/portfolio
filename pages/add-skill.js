@@ -89,8 +89,7 @@ const AddSkill = () => {
                             onChange={(e) => setAddSkill({ ...addskill, SelfRating: e.target.value })}
                             inputProps={{ min: 1, max: 10 }}
                             required
-                            />
-
+                        />
                     </div>
                     <Button variant="contained" className='myBtn' color="primary" type='submit'>
                         Add Skill

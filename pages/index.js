@@ -5,9 +5,8 @@ import Educations from '@/components/Educations';
 import SkillsApi from '@/components/SkillsApi';
 import ProjectApi from '@/components/ProjectApi';
 import Footers from '@/components/Footers';
-import signin from './login/Signin';
-import signup from './login/Signup';
-;
+
+
 
 export default function Home() {
   return (
@@ -27,8 +26,6 @@ export default function Home() {
         <section id="skills"><SkillsApi /></section>
         <section id="projects"><ProjectApi /></section>
         <section id="contact"><Footers /></section>
-        <section id="signin"><signin /></section>
-        <section id="signup"><signup /></section>
       </main>
     </>
   );
