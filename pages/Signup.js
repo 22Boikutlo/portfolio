@@ -9,7 +9,7 @@ function signup() {
     const handleRegister = async (e) => {
         e.preventDefault();
            
-    const res = await fetch('https://localhost:7236/api/User/register', {
+    const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/User/register', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),

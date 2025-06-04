@@ -8,7 +8,7 @@ const signin = () => {
     const [password, setPassword] = React.useState('');
       const handlesignin = async (e) => {
     e.preventDefault();
-    const res = await fetch('https://localhost:7236/api/User/login', {
+    const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/User/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
