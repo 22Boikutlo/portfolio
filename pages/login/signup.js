@@ -1,8 +1,9 @@
+import { Button } from '@mui/material';
 import React from 'react'
 
 function signup() {
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const handleRegister = async (e) => {
         e.preventDefault();
            
@@ -23,11 +24,29 @@ function signup() {
 return (
     <div>
         <form onSubmit={handleRegister}>
-      <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-      <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-      <button type="submit">Register</button>
-    </form>
-        </div>
+          <TextField
+            label="Email"
+            id='email'
+            variant='standard'
+            type='email'
+            className='form-control'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <TextField
+            id='password'
+            label="Password"
+            variant='standard'
+            type='password'
+            className='form-control'
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />        
+          <Button variant="contained" color="primary" type="submit" className='myBtn'>Register</Button> 
+      </form>
+    </div>
   )
 }
 

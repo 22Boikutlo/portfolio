@@ -80,16 +80,16 @@ const AddSkill = () => {
                     </div>
                     <div className='form-group'>
                         <TextField
-  id='selfRating'
-  label="Self Rating"
-  variant='standard'
-  type='number'
-  className='form-control'
-  value={addskill.SelfRating}
-  onChange={(e) => setAddSkill({ ...addskill, SelfRating: e.target.value })}
-  inputProps={{ min: 1, max: 10 }}
-  required
-/>
+                            id='selfRating'
+                            label="Self Rating"
+                            variant='standard'
+                            type='number'
+                            className='form-control'
+                            value={addskill.SelfRating}
+                            onChange={(e) => setAddSkill({ ...addskill, SelfRating: e.target.value })}
+                            inputProps={{ min: 1, max: 10 }}
+                            required
+                            />
 
                     </div>
                     <Button variant="contained" className='myBtn' color="primary" type='submit'>

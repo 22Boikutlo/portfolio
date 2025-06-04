@@ -5,8 +5,8 @@ import Educations from '@/components/Educations';
 import SkillsApi from '@/components/SkillsApi';
 import ProjectApi from '@/components/ProjectApi';
 import Footers from '@/components/Footers';
-import signin from './login/signin';
-import signup from './login/signup';
+import signin from './login/Signin';
+import signup from './login/Signup';
 ;
 
 export default function Home() {
