@@ -3,7 +3,7 @@ import { TextField } from '@mui/material';
 import { useState } from 'react';
 import React from 'react'
 
-function signup() {
+function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const handleRegister = async (e) => {
@@ -64,4 +64,4 @@ return (
   )
 }
 
-export default signup
+export default Signup

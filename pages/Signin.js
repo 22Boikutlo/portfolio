@@ -3,10 +3,10 @@ import { Button, TextField } from '@mui/material';
 import { useState } from 'react';
 import Link from 'next/link';
 
-const signin = () => {
-    const [email, setEmail] = React.useState('');
-    const [password, setPassword] = React.useState('');
-      const handlesignin = async (e) => {
+const Signin = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+      const handleSignin = async (e) => {
     e.preventDefault();
     const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/User/login', {
       method: 'POST',
@@ -25,7 +25,7 @@ const signin = () => {
     <div>
       <div className='footer'>
         <div className='container'>
-          <form className= "text-field" onSubmit={handlesignin}>
+          <form className= "text-field" onSubmit={handleSignin}>
             <h2>Sign In</h2>
             <p>Please enter your email and password to sign in.</p>
             <div className='form-group'>
@@ -62,4 +62,4 @@ const signin = () => {
   )
 }
 
-export default signin
+export default Signin
