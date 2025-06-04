@@ -1,13 +1,14 @@
 import React from 'react'
 import { Button, TextField } from '@mui/material';
 import { useState } from 'react';
+import Link from 'next/link';
 
 const signin = () => {
     const [email, setEmail] = React.useState('');
     const [password, setPassword] = React.useState('');
       const handlesignin = async (e) => {
     e.preventDefault();
-    const res = await fetch('http://localhost:5000/api/account/login', {
+    const res = await fetch('https://localhost:7236/api/User/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password }),
@@ -50,8 +51,10 @@ const signin = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-            </div>           
-            <Button variant="contained" color="primary" type="submit" className='myBtn'>Sign In</Button>
+            </div>
+            <Link href="/add-buttons" className='myBtn'>
+              <Button variant="contained" color="primary" type="submit" className='myBtn'>Sign In</Button>              
+            </Link>           
           </form>
         </div>
       </div>

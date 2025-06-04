@@ -54,7 +54,9 @@ return (
                 required
               />
             </div>
+            <div className='form-group'>
             <Button variant="contained" color="primary" type="submit" className='myBtn'>Register</Button> 
+            </div>
           </form>
         </div>
       </div>

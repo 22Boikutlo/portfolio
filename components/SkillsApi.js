@@ -47,11 +47,7 @@ const Skills = () => {
     <div id="skills" className="skills">
       <div className="container">
         <h1>Skills</h1>
-        <Link href="/add-skill">
-          <Button variant="contained" className="myBtn" color="primary">
-            Add Skill
-          </Button>
-        </Link>
+        
 
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
