@@ -21,11 +21,8 @@ function Projects() {
     <div id="projects" className="projects">
       <div className="container">
         <h1>Projects</h1>
-        <Link href="/add-project">
-          <Button variant="contained" className='myBtn' color="primary"  >
-            Add Project
-          </Button>        
-      </Link>
+       
+       
         <div className="row">
 
           <div className="col-md-4">

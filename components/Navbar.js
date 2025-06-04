@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
+
+import { Button } from '@mui/material';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,6 +31,20 @@ const Navbar = () => {
               <a className="btn btn-light btn-outline-primary m-1" href="#contact">Contact</a>
                <a className="btn btn-light btn-outline-primary m-1" href="/Signin">Signin</a>
               <a className="btn btn-light btn-outline-primary m-1 align-left" href="/Signup">Signup</a>
+            </div>
+            <div>
+              
+              <Link href="/Signin">
+               <Button className="btn btn-light btn-outline-primary m-2" variant="contained" color="primary"
+                >Sign In</Button>
+              </Link>
+             
+              
+              <Link href="/Signup">
+                <Button className="btn btn-light btn-outline-primary m-2" variant="contained" color="primary"
+                >Sign Up</Button>
+              </Link>
+              
             </div>
 
             <button
