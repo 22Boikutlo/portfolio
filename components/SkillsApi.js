@@ -33,7 +33,7 @@ const Skills = () => {
   const groupedSkills = {
     Languages: skills.slice(0, 5),
     Frameworks: skills.slice(5, 9),
-    Databases: skills.slice(9, 11),
+    Databases: skills.slice(10, 11),
     Tools: skills.slice(11, 13),
     Methodologies: skills.slice(13, 15),
     OS: skills.slice(15, 17),
