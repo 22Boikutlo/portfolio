@@ -44,16 +44,16 @@ section {
   background-color: var(--dark-bg);
   color: var(--text-light);
   position: fixed;
-  top: 0;
+  top: auto;
   width: 100%;
-  z-index: 999;
+  z-index: 1;
   padding: 0.5rem 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar .topNav {
   display: flex;
-  flex-direction: row;
+ 
   justify-content: space-between;
   align-items: center;
 }
@@ -278,6 +278,7 @@ section {
 
 .profile,
 .icon {
+  margin-top: auto;
   border-radius: var(--border-radius);
   width: 50%;
   height: 50%;
@@ -293,20 +294,21 @@ section {
     font-size: 1.8rem;
   }
   .navbar .myLinks {
-    display: block;
+    display: flex;
+    position: top;
   }
   .navbar .menu-button {
-    display: none;
+    /*display: none;*/
   }
 
   .navbar .myLinks a {
-    display:block;
+    /*display:block;*/
     margin: 0.25rem;
     font-size: 0.875rem;
     padding: 0.5rem;
   }
 
-  .education-item,
+ .education-item,
   .skills-item,
   .project-item {
     padding: 0.75rem;

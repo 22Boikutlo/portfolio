@@ -20,30 +20,27 @@ const Navbar = () => {
         />
       </Head>
 
-      <nav className="navbar navbar-expand-md bg-light navbar-light fixed-top shadow-sm">
+      <nav className="navbar navbar-expand-md bg-light navbar-light shadow-sm">
         <div className="container-fluid">
           <div className="topNav d-flex justify-content-between w-100">
-            <div className={`myLinks ${menuOpen ? 'd-block' : 'd-none'} d-md-flex`} id='navnav'>
+            {/*<div className={`myLinks ${menuOpen ? 'd-block' : 'd-none'} d-md-flex`} id='navnav'>*/}
               <Button className="btn btn-light btn-outline-primary m-1" href="#aboutme">About Me</Button>
               <Button className="btn btn-light btn-outline-primary m-1" href="#education">Education</Button>
               <Button className="btn btn-light btn-outline-primary m-1" href="#skills">Skills</Button>
               <Button className="btn btn-light btn-outline-primary m-1" href="#projects">Projects</Button>
               <Button className="btn btn-light btn-outline-primary m-1" href="#contact">Contact</Button>
-            </div>
+           {/*} </div>*/}
+             {/*
             <div>
               
-              <Link href="/Signin">
-               <Button className="btn btn-light btn-outline-primary m-1" variant="contained" color="primary"
-                >Sign In</Button>
-              </Link>
-             
+             } <a href="/Signin">
+               Sign In
+              </a>        
+              <a href="/Signup">
+               Sign U
+              </a>
               
-              <Link href="/Signup">
-                <Button className="btn btn-light btn-outline-primary m-1" variant="contained" color="primary"
-                >Sign Up</Button>
-              </Link>
-              
-            </div>
+            </div>*/}
 
             <button
               onClick={toggleMenu}

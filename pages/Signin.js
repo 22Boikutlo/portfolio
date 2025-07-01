@@ -2,11 +2,13 @@ import React from 'react'
 import { Button, TextField } from '@mui/material';
 import { useState } from 'react';
 import Link from 'next/link';
+import { href, Navigate } from 'react-router-dom';
 
 const Signin = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
       const handleSignin = async (e) => {
+        return <Navigate href='/add-buttons' />;  
     e.preventDefault();
     const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/User/login', {
       method: 'POST',
@@ -51,10 +53,8 @@ const Signin = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-            </div>
-            <Link href="/add-buttons" className='myBtn'>
-              <Button variant="contained" color="primary" type="submit" className='myBtn'>Sign In</Button>              
-            </Link>           
+            </div>            
+              <Button variant="contained" color="primary" type="submit" className='myBtn'>Sign In</Button>                    
           </form>
         </div>
       </div>

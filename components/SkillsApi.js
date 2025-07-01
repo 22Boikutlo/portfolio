@@ -12,17 +12,17 @@ const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [error, setError] = useState(null);
 
-  useEffect(() => {
-    async function fetchSkills() {
-      try {
-        const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Skill');
-        const data = await res.json();
-        setSkills(data);
-      } catch (err) {
-        console.error('Failed to fetch skills data:', err);
-        setError('Failed to fetch skills. Please try again later.');
-      }
+  async function fetchSkills() {
+    try {
+      const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Skill');
+      const data = await res.json();
+      setSkills(data);
+    } catch (err) {
+      console.error('Failed to fetch skills data:', err);
+      setError('Failed to fetch skills. Please try again later.');
     }
+  }
+  useEffect(() => {
     fetchSkills();
   }, []);
 

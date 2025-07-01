@@ -2,11 +2,15 @@ import { Button } from '@mui/material';
 import { TextField } from '@mui/material';
 import { useState } from 'react';
 import React from 'react'
+import Link from 'next/link';
 
 function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const handleRegister = async (e) => {
+      if (email != null && password != null) {
+        console.log(email, password);
+        return ('/Signin');}
         e.preventDefault();
            
     const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/User/register', {
@@ -54,9 +58,14 @@ return (
                 required
               />
             </div>
-            <div className='form-group'>
-            <Button variant="contained" color="primary" type="submit" className='myBtn'>Register</Button> 
-            </div>
+              {/*<Link href="/Signin" className='form-group'>
+              <Button variant="contained" color="primary" type="submit" className='myBtn'>Register</Button>              
+            </Link> */}
+            <a href="/Signin">
+              <div className='form-group'>
+                <Button variant="contained" color="primary" type="submit" className='myBtn'>Register</Button> 
+              </div>
+            </a>
           </form>
         </div>
       </div>

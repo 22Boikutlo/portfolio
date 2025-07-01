@@ -23,8 +23,7 @@ const AboutMe = () => {
   if (!owner) return <p>Loading...</p>;
 
   return (
-    <div id="about" className="about-me">
-     
+    <div id="about" className="about-me">     
         <div className="container">
           <div className="row">
            <div className="col-md-6">
