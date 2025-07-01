@@ -30,17 +30,7 @@ const Navbar = () => {
               <Button className="btn btn-light btn-outline-primary m-1" href="#projects">Projects</Button>
               <Button className="btn btn-light btn-outline-primary m-1" href="#contact">Contact</Button>
            {/*} </div>*/}
-             {/*
-            <div>
-              
-             } <a href="/Signin">
-               Sign In
-              </a>        
-              <a href="/Signup">
-               Sign U
-              </a>
-              
-            </div>*/}
+             
 
             <button
               onClick={toggleMenu}

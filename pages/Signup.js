@@ -61,11 +61,11 @@ return (
               {/*<Link href="/Signin" className='form-group'>
               <Button variant="contained" color="primary" type="submit" className='myBtn'>Register</Button>              
             </Link> */}
-            <a href="/Signin">
+            <Link href="/Signin">
               <div className='form-group'>
                 <Button variant="contained" color="primary" type="submit" className='myBtn'>Register</Button> 
               </div>
-            </a>
+            </Link>
           </form>
         </div>
       </div>
