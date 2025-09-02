@@ -5,6 +5,8 @@ import Educations from '@/components/Educations';
 import SkillsApi from '@/components/SkillsApi';
 import ProjectApi from '@/components/ProjectApi';
 import Footers from '@/components/Footers';
+import Contact from '@/components/Contact';
+import Hero from '@/components/Hero';
 
 
 
@@ -21,11 +23,13 @@ export default function Home() {
       <Navbar />
 
       <main style={{ paddingTop: "80px" }}>
+        <section id="hero"><Hero /></section>
         <section id="aboutme"><About /></section>
         <section id="education"><Educations /></section>
         <section id="skills"><SkillsApi /></section>
         <section id="projects"><ProjectApi /></section>
-        <section id="contact"><Footers /></section>
+        <section id="contact"><Contact /></section>
+        <section id="footer"><Footers /></section>
       </main>
     </>
   );

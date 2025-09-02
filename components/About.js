@@ -27,13 +27,7 @@ const AboutMe = () => {
         <div className="container">
           <div className="row">
            <div className="col-md-6">
-              <Image
-                src={`/images/${owner.ProfilePicture || 'ProfilePicture.jpeg'}`}
-                alt={`${owner.FirstName} ${owner.LastName}`}
-                width={90}
-                height={90}
-                className="rounded-circle profile"
-              />
+             
             </div>
             <div className="col-md-6">
               <h2>{owner.FirstName} {owner.LastName}</h2>
