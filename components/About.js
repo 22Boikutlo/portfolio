@@ -20,7 +20,7 @@ const AboutMe = () => {
     fetchOwner();
   }, []);
 
-  if (!owner) return <p>Loading...</p>;
+  if (!owner) return <p>Loading owner information...Refresh the page to accelerate the loading of  owner information...</p>;
 
   return (
     <div id="about" className="about-me">     
@@ -30,7 +30,7 @@ const AboutMe = () => {
              
             </div>
             <div className="col-md-6">
-              <h2>{owner.FirstName} {owner.LastName}</h2>
+              <h2>{owner.FirstName} {owner.MiddleName} {owner.LastName}</h2>
               <p><strong>{owner.OwnerRole}</strong></p>
               <p>{owner.AboutMe}</p>
             </div>
