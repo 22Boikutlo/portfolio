@@ -1,35 +1,43 @@
 import { useEffect, useState } from 'react';
-import { Menu } from '@mui/material';
-import { LogoDev } from '@mui/icons-material';
-import styles from './Navbar.module.css'
+import { LogoDev, Menu } from '@mui/icons-material';
+import styles from './Navbar.module.css';
 import { Link } from 'react-scroll';
 
 const Navbar = () => {
-  /*keeping navigation bar transparent until scrolled more than 50px*/
+  /* keeping navigation bar transparent until scrolled more than 50px */
   const [sticky, setSticky] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => { window.scrollY > 50 ? setSticky(true) : setSticky(false);
-    })
-  }, [])
-  /*toggle menu for mobile*/
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const toggleMenu = () => { mobileMenu ? setMobileMenu(false) : setMobileMenu(true);
 
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setSticky(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll); // ✅ cleanup
+  }, []);
+
+  /* toggle menu for mobile */
+  const [mobileMenu, setMobileMenu] = useState(false);
+  const toggleMenu = () => setMobileMenu((prev) => !prev);
+
+  /* close menu when a link is clicked */
+  const closeMenu = () => setMobileMenu(false);
 
   return (
-    <nav className='nav'>
-      <div className={`${styles.container} ${sticky ? styles.darkNav : ''}`}>
-        <ul className={mobileMenu ? '' : styles.hideMobileMenu}>
-          <LogoDev className={styles.logo} />
-          <li><Link to='aboutme' smooth={true}  duration={500}>About</Link></li>
-          <li><Link to='education' smooth={true}  duration={500}>Education</Link></li>
-          <li><Link to='skills' smooth={true}  duration={500}>Skills</Link></li>
-          <li><Link to='projects' smooth={true}  duration={500}>Projects</Link></li>
-        </ul>
-        <Menu onClick={toggleMenu} aria-label="Toggle menu" className="menuIcon" />
+    <nav className={`nav ${styles.container} ${sticky ? styles.darkNav : ''}`}>
+      <LogoDev className={styles.logo} />
 
-      </div>
+      <ul className={mobileMenu ? styles.showMobileMenu : styles.hideMobileMenu}>
+        <li><Link to='aboutme' smooth duration={500} onClick={closeMenu}>About</Link></li>
+        <li><Link to='education' smooth duration={500} onClick={closeMenu}>Education</Link></li>
+        <li><Link to='skills' smooth duration={500} onClick={closeMenu}>Skills</Link></li>
+        <li><Link to='projects' smooth duration={500} onClick={closeMenu}>Projects</Link></li>
+      </ul>
+
+      {/* Wrap Menu icon in a button */}
+      <button onClick={toggleMenu} aria-label="Toggle menu" className={styles.menuIcon}>
+        <Menu />
+      </button>
     </nav>
   );
 };
