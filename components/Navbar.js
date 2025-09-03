@@ -20,7 +20,7 @@ const Navbar = () => {
   const toggleMenu = () => setMobileMenu(prev => !prev); 
 
   /* close menu when a link is clicked */
-  const closeMenu = () => setMobileMenu(true);
+  const closeMenu = () => setMobileMenu(false);
 
   return (
     <nav className={`nav container ${sticky ? 'darkNav' : ''}`}>
