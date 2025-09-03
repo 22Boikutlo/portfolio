@@ -25,7 +25,7 @@ function Projects() {
        
         <div className="row">
 
-          <div className="col-md-4">
+          <div className="col-4">
             <div className="project-item">
               <h2>{projects.first?.ProjectName}</h2>
               <p>{projects.first?.ProjectDescription}</p>
@@ -41,7 +41,7 @@ function Projects() {
             </div>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-4">
             <div className="project-item">
               <h2>{projects.second?.ProjectName}</h2>
               <p>{projects.second?.ProjectDescription}</p>
@@ -57,7 +57,7 @@ function Projects() {
             </div>
           </div>
 
-          <div className="col-md-4">
+          <div className="col-4">
             <div className="project-item">
               <h2>{projects.third?.ProjectName}</h2>
               <p>{projects.third?.ProjectDescription}</p>

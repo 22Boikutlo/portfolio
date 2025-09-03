@@ -15,6 +15,22 @@
   --border-radius: 10px;
   --transition: transform 0.2s, color 0.2s;
 }
+nav ul {
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 20px;
+  font-size: 16px;
+  padding: auto;
+  align-items: center;
+}
 
 html {
   scroll-behavior: smooth;
@@ -155,6 +171,7 @@ section {
   background-color: var(--mid-bg);
   margin: 1rem 0;
   padding: 1rem;
+ 
 }
 
 .project-item {
@@ -164,6 +181,7 @@ section {
   padding: 1rem;
   text-align: center;
   transition: var(--transition);
+   display: block;
 }
 
 .project-item:hover {
@@ -206,3 +224,130 @@ section {
 }
 
 
+/*-----------navbar-------------*/
+.nav {
+  width: 100%;
+  color: #fff;
+  padding: 4px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+  background: #000;
+}
+
+.logo {
+  font-size: 2rem; /* control icon size */
+  color: blueviolet;
+}
+.nav ul {
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav ul li {
+    display: inline-block;
+    margin: 5px 20px;
+    font-size: 16px;
+}
+
+
+.nav ul {
+    display: flex;
+  margin-left: auto; /*  push nav links to right */
+  display: flex;
+  align-items: center;
+}
+
+.nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 5px 20px;
+  font-size: 16px;
+  color: #fff;
+  align-items: center;
+}
+
+.darkNav {
+  background-color: #212ea0;
+  transition: 0.5s;
+}
+
+.menuIcon {
+  display: none;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+/*--------media queries----*/
+@media (max-width: 1200px) {
+  .container {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  .btn {
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .logo {
+    font-size: 1.6rem;
+  }
+  .nav ul li {
+    margin: 10px 15px;
+  }
+}
+
+@media (max-width: 840px) {
+  .nav {
+    padding: 15px 0;
+  }
+  
+  .logo {
+    font-size: 1.4rem;
+  }
+  
+  .nav ul {
+    display:inline;
+    position: fixed;
+    top: 0;
+    right: -200px; /* start hidden */
+    bottom: 0;
+    background: #212ea0;
+    width: 200px;
+    padding-top: 70px;
+    flex-direction: column;
+    transition: right 0.5s ease;
+  }
+
+  .nav ul li {
+    display: none;
+    margin: 20px 40px;
+  }
+
+  .menuIcon {
+    display: block;
+    width: 30px;
+    cursor: pointer;
+    z-index: 20;
+    position: relative; /* stay above menu */
+  }
+
+  /* hide/show classes */
+  .hideMobileMenu {
+    right: -200px;
+  }
+
+  .showMobileMenu {
+    right: 0;
+  }
+}
