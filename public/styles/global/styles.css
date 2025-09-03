@@ -230,8 +230,8 @@ section {
   color: #fff;
   padding: 4px 0;
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0;  
+  margin: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -243,28 +243,14 @@ section {
   font-size: 2rem; /* control icon size */
   color: blueviolet;
 }
-.nav ul {
+nav ul {
     align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.nav ul li {
-    display: inline-block;
-    margin: 5px 20px;
-    font-size: 16px;
-}
-
-
-.nav ul {
-    display: flex;
-  margin-left: auto; /*  push nav links to right */
-  display: flex;
-  align-items: center;
-}
-
-.nav ul li {
+nav ul li {
   display: inline-block;
   list-style: none;
   margin: 5px 20px;
@@ -350,4 +336,47 @@ section {
   .showMobileMenu {
     right: 0;
   }
+}
+/*-------------Hero------*/
+.hero{
+    width:100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('/images/profile.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heroText{
+    text-align: center;
+    max-width: 800px;
+}
+.heroText h1{
+    font-size: 60px;
+    font-weight: 600;
+    
+}
+.heroText p{
+    max-width: 700px;
+    margin: 10px auto 20px;
+    line-height: 1.4;
+}
+/*--------media queries----*/
+@media(max-width: 850px){
+    .heroText h1{
+        font-size: 40px;
+    }
+}
+@media(max-width: 650px){
+    .heroText h1{
+        font-size: 30px;
+        max-width: 400px;
+        margin: auto;
+    }  
+    .heroText p{
+        font-size: 14px;
+        margin: 15px auto 30px;
+    }
 }
