@@ -16,28 +16,32 @@ const Navbar = () => {
   }, []);
 
   /* toggle menu for mobile */
-  const [mobileMenu, setMobileMenu] = useState(false);
-  const toggleMenu = () => setMobileMenu(prev => !prev); 
-
-  /* close menu when a link is clicked */
-  const closeMenu = () => setMobileMenu(false);
+   const [showMenu, setShowMenu] = useState(false);
 
   return (
-    <nav className={`nav container ${sticky ? 'darkNav' : ''}`}>
-      <LogoDev className='logo' />
+            <nav className='navbar'>
+            <img src={logo} alt="logo" className='logo' />
+            <div class="desktopMenu">
+                <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>Home </Link>
+                <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>About </Link>                
+                <Link activeClass='active' to='stack' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>TechStack </Link>
+                <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Portfolio </Link>
+                <Link activeClass='active' to='clients' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Client </Link>
+            </div>
+            <button className='desktopMenuBtn' onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} >
+                <img src={contact} alt='contact' className='desktopMenuImg ' />Contact Me
+            </button>
+            <img src={menubar} alt="menu" className='mobileMenu' onClick={() => setShowMenu(!showMenu)} />
+            <div class="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
+                <Link activeClass='active' to='intro' spy={true} smooth={true} offset={-100} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Home </Link>
+                <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>About </Link>
+                <Link activeClass='active' to='stack' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>My Tech Stack </Link>
+                <Link activeClass='active' to='works' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Portfolio </Link>
+                <Link activeClass='active' to='clients' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Client </Link>
+                <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Contact </Link>
 
-      <ul  className={mobileMenu ? 'showMobileMenu' : 'hideMobileMenu'}>
-        <li><Link to='aboutme' smooth duration={500} onClick={closeMenu}>About</Link></li>
-        <li><Link to='education' smooth duration={500} onClick={closeMenu}>Education</Link></li>
-        <li><Link to='skills' smooth duration={500} onClick={closeMenu}>Skills</Link></li>
-        <li><Link to='projects' smooth duration={500} onClick={closeMenu}>Projects</Link></li>
-      </ul>
-
-      <button onClick={toggleMenu} aria-label="Toggle menu" className='menuIcon'>
-        <Menu />
-      </button>
-    
-    </nav>
+            </div>
+        </nav>
         
   );
   
