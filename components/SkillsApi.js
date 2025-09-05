@@ -7,6 +7,7 @@ import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Button } from '@mui/material';
 import Link from 'next/link';
+import Title from './Title';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
@@ -33,10 +34,10 @@ const Skills = () => {
   const groupedSkills = {
     Languages: skills.slice(0, 5),
     Frameworks: skills.slice(5, 9),
-    Databases: skills.slice(10, 11),
-    Tools: skills.slice(11, 13),
-    Methodologies: skills.slice(13, 15),
-    OS: skills.slice(16, 18),
+    Databases: skills.slice(9, 10),
+    Tools: skills.slice(10, 12),
+    Methodologies: skills.slice(12, 15),
+    OS: skills.slice(15, 17),
     Environments: skills.slice(17, 25),
     Soft: ['Problem Solving', 'Teamwork', 'Communication', 'Adaptability'],
     Interests: ['Software Development', 'Cloud Computing', 'Artificial Intelligence'],
@@ -46,7 +47,7 @@ const Skills = () => {
   return (
     <div id="skills" className="skills">
       <div className="container">
-        <h1>Skills</h1>
+        <Title title='Skills' subTitle='I have listed my competencies and I have classed accordingly' />
         
 
         <Swiper

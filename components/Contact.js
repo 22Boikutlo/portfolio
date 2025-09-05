@@ -76,7 +76,7 @@ const Contact = () => {
               <label>Message</label>
               <textarea placeholder='Enter your message' name="message" rows="4" required></textarea>
 
-              <button type="submit" className='btn dark-btn'>
+              <button type="submit" className='desktopMenuBtn'>
                 Submit Now <ArrowForward />
               </button>
             </form>

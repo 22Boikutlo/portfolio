@@ -21,7 +21,7 @@ export default function Home() {
 
       <Navbar />
 
-      <main style={{ paddingTop: "80px" }}>
+      <main>
         <section id="about"><About /></section>
         <section id="education"><Educations /></section>
         <section id="skills"><SkillsApi /></section>
