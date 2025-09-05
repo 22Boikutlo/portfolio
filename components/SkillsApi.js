@@ -36,11 +36,11 @@ const Skills = () => {
     Databases: skills.slice(10, 11),
     Tools: skills.slice(11, 13),
     Methodologies: skills.slice(13, 15),
-    OS: skills.slice(15, 17),
+    OS: skills.slice(16, 18),
     Environments: skills.slice(17, 25),
     Soft: ['Problem Solving', 'Teamwork', 'Communication', 'Adaptability'],
     Interests: ['Software Development', 'Cloud Computing', 'Artificial Intelligence'],
-    Certifications: ['Azure Fundamentals (LinkedIn)', 'Azure Admin Essentials (LinkedIn)'],
+    Certifications: ['Azure Fundamentals (LinkedIn)', 'Git Essentials (LinkedIn)'],
   };
 
   return (

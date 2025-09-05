@@ -25,7 +25,7 @@ const Navbar = () => {
             <nav className='navbar'>
             <Image src={logo} alt="logo" className='logo' />
             <div class="desktopMenu">
-                <Link activeClass='active' to='aboutme' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>About Me </Link>
+                <Link activeClass='active' to='about' spy={true} smooth={true} offset={-100} duration={500} className='desktopMenuListItem'>About Me </Link>
                 <Link activeClass='active' to='education' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Education </Link>                
                 <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Skills </Link>
                 <Link activeClass='active' to='projects' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Projects </Link>
@@ -36,7 +36,7 @@ const Navbar = () => {
             </button>
             <Image src={menubar} alt="menu" className='mobileMenu' onClick={() => setShowMenu(!showMenu)} />
             <div class="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
-                <Link activeClass='active' to='aboutme' spy={true} smooth={true} offset={-100} duration={500} className='listItem' onClick={() => setShowMenu(false)}>About Me </Link>
+                <Link activeClass='active' to='about' spy={true} smooth={true} offset={-100} duration={500} className='listItem' onClick={() => setShowMenu(false)}>About Me </Link>
                 <Link activeClass='active' to='education' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Education</Link>
                 <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Skills </Link>
                 <Link activeClass='active' to='projects' spy={true} smooth={true} offset={-50} duration={500} className='listItem' onClick={() => setShowMenu(false)}>Projects </Link>

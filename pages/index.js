@@ -1,12 +1,11 @@
 import Head from 'next/head';
 import Navbar from '@/components/Navbar';
-import About from '@/components/About';
 import Educations from '@/components/Educations';
 import SkillsApi from '@/components/SkillsApi';
 import ProjectApi from '@/components/ProjectApi';
 import Footers from '@/components/Footers';
 import Contact from '@/components/Contact';
-import Hero from '@/components/Hero';
+import About from '@/components/About';
 
 
 
@@ -23,8 +22,7 @@ export default function Home() {
       <Navbar />
 
       <main style={{ paddingTop: "80px" }}>
-        <section id="hero"><Hero /></section>
-        <section id="aboutme"><About /></section>
+        <section id="about"><About /></section>
         <section id="education"><Educations /></section>
         <section id="skills"><SkillsApi /></section>
         <section id="projects"><ProjectApi /></section>

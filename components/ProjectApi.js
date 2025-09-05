@@ -20,11 +20,9 @@ function Projects() {
   return (
     <div id="projects" className="projects">
       <div className="container">
-        <h1>Projects</h1>
-       
+        <h1>Projects</h1>       
        
         <div className="row">
-
           <div className="col-4">
             <div className="project-item">
               <h2>{projects.first?.ProjectName}</h2>
