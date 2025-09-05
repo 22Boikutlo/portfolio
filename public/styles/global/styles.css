@@ -15,22 +15,7 @@
   --border-radius: 10px;
   --transition: transform 0.2s, color 0.2s;
 }
-nav ul {
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
 
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 5px 20px;
-  font-size: 16px;
-  padding: auto;
-  align-items: center;
-}
 
 html {
   scroll-behavior: smooth;
@@ -227,119 +212,110 @@ section {
 /*-----------navbar-------------*/
 
 .navbar{
-  background: #000;
     height: 5rem;
     width: 100vw;
-    margin: 0 auto;
+    margin: 0 ;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    justify-items: space-betweem;
+    justify-content: space-between;
     position: sticky;
     top: 0;
     z-index:3;
-    max-width: 75rem;
+    
+    background: rgb(30,30,30);
 }
+.logo{
+    object-fit: cover;
+    height: 3rem;
+    width: 4rem;
+}
+.desktopMenuListItem{
+    margin: 1rem;
+    color: #fff;
+    cursor: pointer;
+    
+}
+.desktopMenuListItem:hover{
+    margin: 1rem;
+    border-bottom: 3px solid yellow;
+    color: yellow;
+    padding-bottom: 0.5rem;
 
-.logo {
-  font-size: 2rem; /* control icon size */
-  color: blueviolet;
 }
-nav ul {
+.active{
+    color: yellow;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid yellow;
+}
+.desktopMenuBtn{
+    background: #fff;
+    color: #000;
+    border: none;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    padding: 0 1rem;
+    border-radius: 2rem;
+    background:#fff;
 }
-
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 5px 20px;
-  font-size: 16px;
-  color: #000
-  ;
-  align-items: center;
+.desktopMenuImg{
+    object-fit: cover;
+    height: 1rem;
+    width: 1rem;
+    margin: 1rem;    
 }
-
-.darkNav {
-  background-color: #212ea0;
-  transition: 0.5s;
+.mobileMenu{
+    display: none;
+    object-fit: cover;
+    height: 1.8rem;
 }
-
-.menuIcon {
-  display: none;
+.navMenu{
+    position: absolute;
+    top: 4rem;
+    right:  2rem;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    height: fit-content;
+    min-width: 15rem;
+    background: rgb(40,40,40);
+    border-radius: 1rem;
 }
-
-.container {
-  padding-left: 10%;
-  padding-right: 10%;
+.listItem{
+    color: #fff;
+    padding: 0.5rem 3rem;
+    margin: 0.25rem;
+    background: rgb(30,30,30);
 }
-
+/*-----media query---*/
+@media screen and (max-width:720px)
+ {
+    .mobileMenu{
+        display: flex;
+    }   
+    .desktopMenu{
+        display: none;
+    }
+    .desktopMenuBtn{
+        display: none;
+    }
+}
 /*--------media queries----*/
 @media (max-width: 1200px) {
   .container {
     padding-left: 5%;
     padding-right: 5%;
   }
-  .btn {
-    padding: 14px 24px;
-  }
-}
-
-@media (max-width: 1000px) {
-  .logo {
-    font-size: 1.6rem;
-  }
-  .nav ul li {
-    margin: 10px 15px;
-  }
-}
-
-@media (max-width: 840px) {
-  .nav {
-    padding: 15px 0;
-  }
   
-  .logo {
-    font-size: 1.4rem;
-  }
-  
-  .nav ul {
-    display:inline;
-    position: fixed;
-    top: 0;
-    right: -200px; /* start hidden */
-    bottom: 0;
-    background: #212ea0;
-    width: 200px;
-    padding-top: 70px;
-    flex-direction: column;
-    transition: right 0.5s ease;
-  }
-
-  .nav ul li {
-    display: none;
-    margin: 20px 40px;
-  }
-
-  .menuIcon {
-    display: block;
-    width: 30px;
-    cursor: pointer;
-    z-index: 20;
-    position: relative; /* stay above menu */
-  }
-
-  /* hide/show classes */
-  .hideMobileMenu {
-    right: -200px;
-  }
-
-  .showMobileMenu {
-    right: 0;
-  }
 }
+
+
+
+  
+
+ 
 /*-------------Hero------*/
 .hero{
     width:100%;
