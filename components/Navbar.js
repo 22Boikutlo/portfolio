@@ -30,10 +30,14 @@ const Navbar = () => {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Skills </Link>
         <Link activeClass='active' to='projects' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Projects </Link>
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Contact </Link>
+
       </div>
-      <button className='desktopMenuBtn' onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })} >
-        <Image src={contact} alt='contact' className='desktopMenuImg ' />Contact Me
-      </button>
+      <a href='/cv.pdf' download>
+        <button className='desktopMenuBtn' >
+          <Image src={contact} alt='contact' className='desktopMenuImg ' />
+          Download CV
+        </button>
+      </a>
       <Image src={menubar} alt="menu" className='mobileMenu' onClick={() => setShowMenu(!showMenu)} />
       <div class="navMenu" style={{ display: showMenu ? 'flex' : 'none' }}>
         <Link activeClass='active' to='about' spy={true} smooth={true} offset={-100} duration={500} className='listItem' onClick={() => setShowMenu(false)}>About Me </Link>
