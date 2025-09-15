@@ -3,7 +3,6 @@ import SchoolIcon from '@mui/icons-material/School';
 
 const Education = () => {
   const [educationList, setEducationList] = useState([]);
-  const [expandedIndexes, setExpandedIndexes] = useState([]);
 
   useEffect(() => {
     async function fetchEducation() {
@@ -18,16 +17,6 @@ const Education = () => {
     }
     fetchEducation();
   }, []);
-
-  const toggleExpand = (index) => {
-    setExpandedIndexes((prev) =>
-      prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index]
-    );
-  };
-
-  const getTruncated = (text, limit = 150) =>
-    text.length > limit ? text.slice(0, limit) + '...' : text;
-
   return (
     <div id="education" className="education-timeline">
       <div className="container">
@@ -40,19 +29,8 @@ const Education = () => {
                 <h2>{edu.SchoolName}</h2>
                 <p><strong>{edu.CourseName}</strong> ({edu.Year})</p>
                 <p>
-                  <strong>Subjects:</strong>{' '}
-                  {expandedIndexes.includes(index)
-                    ? edu.Subjects
-                    : getTruncated(edu.Subjects || '')}
+                  <strong>Subjects:</strong>{ edu.Subjects}
                 </p>
-                {edu.Subjects?.length > 150 && (
-                  <button
-                    onClick={() => toggleExpand(index)}
-                    className="toggle-btn"
-                  >
-                    {expandedIndexes.includes(index) ? 'Show Less' : 'Show More'}
-                  </button>
-                )}
               </div>
             </div>
           ))}

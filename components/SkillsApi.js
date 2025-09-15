@@ -5,9 +5,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-import { Button } from '@mui/material';
-import Link from 'next/link';
-import Title from './Title';
+
+import Image from 'next/image';
+import skill from './assets/skill.png';
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
@@ -30,7 +30,7 @@ const Skills = () => {
   if (error) return <p style={{ color: 'red' }}>{error}</p>;
   if (skills.length === 0) return <p>Loading skills...</p>;
 
-  // Optional: Group skills into categories based on index or API structure
+  // Optional: Group skills into categories based on index 
   const groupedSkills = {
     Languages: skills.slice(0, 5),
     Frameworks: skills.slice(5, 9),
@@ -47,8 +47,7 @@ const Skills = () => {
   return (
     <div id="skills" className="skills">
       <div className="container">
-        <Title title='Skills' subTitle='I have listed my competencies and I have classed accordingly' />
-        
+       <h1 className='skills-title'> <Image src={skill} alt='skill' className='heading-icon'/>Skills</h1>       
 
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -67,7 +66,9 @@ const Skills = () => {
                 <h2>{category}</h2>
                 <ul>
                   {items.map((item, idx) => (
-                    <li key={idx}>{typeof item === 'string' ? item : item.SkillName}</li>
+                    <a href={item.WebAddress} target='_blank' rel='noopener noreferrer' key={idx}>
+                      <li>{typeof item === 'string' ? item : item.SkillName}</li>
+                    </a>
                   ))}
                 </ul>
               </div>

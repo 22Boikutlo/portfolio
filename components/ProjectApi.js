@@ -2,6 +2,8 @@ import React from 'react';
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import project from './assets/project.png';
 
 function Projects() {
   const [projects, setProjects] = useState([]);
@@ -20,7 +22,7 @@ function Projects() {
   return (
     <div id="projects">
       <div className="container">
-        <h1>Projects</h1>
+        <h1 className='skills-title'> <Image src={project} alt='project' className='heading-icon'/>Projects</h1>
         <div  className="projects">
           <div className="project-item">
             <h2>{projects.first?.ProjectName}</h2>

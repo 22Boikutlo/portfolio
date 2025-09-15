@@ -16,7 +16,6 @@
   --transition: transform 0.2s, color 0.2s;
 }
 
-
 html {
   scroll-behavior: smooth;
 }
@@ -53,15 +52,13 @@ nav{
 .desktopMenuListItem{
     margin: 1rem;
     color: #fff;
-    cursor: pointer;
-    
+    cursor: pointer;    
 }
 .desktopMenuListItem:hover{
     margin: 1rem;
     border-bottom: 3px solid yellow;
     color: yellow;
     padding-bottom: 0.5rem;
-
 }
 .active{
     color: yellow;
@@ -79,11 +76,15 @@ nav{
     border-radius: 2rem;
     background:#fff;
 }
+a{
+    text-decoration: none;
+}
 .desktopMenuImg{
     object-fit: cover;
     height: 1rem;
     width: 1rem;
-    margin: 1rem;    
+    margin: 1rem;
+    margin-right: 0.5rem; 
 }
 .mobileMenu{
     display: none;
@@ -110,7 +111,7 @@ nav{
     background: rgb(30,30,30);
 }
 /*-----media query---*/
-@media screen and (max-width:720px)
+@media screen and (max-width:755px)
  {
     .mobileMenu{
         display: flex;
@@ -208,7 +209,20 @@ section {
   margin: 1rem 0;
   padding: 1rem;
 }
-
+.heading-icon{
+  width: 25px;
+  height: 25px;
+  margin-right: 0.5rem;
+}
+.sending-gif{
+  width: 50px;
+  height: 50px;
+  margin-top: 1rem;
+  animation-duration: 5000ms;
+}
+.skills-title{
+  display: flex;
+}
 .skills-item {
   background-color: var(--mid-bg);
   border-radius: var(--border-radius);
@@ -243,7 +257,7 @@ section {
   display: flex;
  
 }
-
+a li{color: black;}
 .project-item {
   background-color: var(--light-bg);
   border-radius: var(--border-radius);
@@ -394,4 +408,76 @@ section {
         font-size: 14px;
         margin: 15px auto 30px;
     }
+}
+/*-------------Contact------*/
+
+.contact{
+    background-color: var(--light-bg);
+    margin: 80px auto;
+    max-width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 1rem;
+}
+.contactCol{
+    flex-basis: 48%;
+    color: #676767;
+}
+.contactCol h3{
+    color: #000f38;
+    font-weight: 500;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.contactCol h3 img{
+    margin-left: 10px;
+    width: 35px;
+}
+.contactCol p{
+    list-style: none;
+}
+.contactCol ul li{
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    list-style: none;
+}
+
+.contact form input, .contact form textarea{
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    background: #ebecfe;
+    border: 0;
+    outline: 0;
+    resize: none;
+}
+.contact-col span{
+    display: block;
+    margin: 20px 0;
+}
+/*--------media queries----*/
+@media(max-width: 700px){
+    .contact{
+        display: block;
+    }
+    .contactCol{
+        padding: 20px;
+    }
+}
+
+.contactItem li {
+  list-style: none;
+  margin: 0.5rem 0;
+  transition: var(--transition);
+}
+
+.contactItem li:hover {
+  background-color: var(--hover-bg);
+  transform: translateX(-10px);
 }

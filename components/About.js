@@ -4,7 +4,7 @@ const Hero = () => {
   const [owner, setOwner] = useState();
     async function fetchOwner() {
       try {
-        const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Owner/1003');
+        const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Owner/2');
         const data = await res.json();
         setOwner(data[0]);
       } catch (error) {

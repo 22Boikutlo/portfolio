@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-scroll';
 import logo from './assets/logo.png';
 import menubar from './assets/menu.png';
-import contact from './assets/contact.png';
+import download from './assets/download.png';
 import Image from 'next/image';
 
 const Navbar = () => {
@@ -30,11 +30,10 @@ const Navbar = () => {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Skills </Link>
         <Link activeClass='active' to='projects' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Projects </Link>
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Contact </Link>
-
       </div>
-      <a href='/cv.pdf' download>
+      <a href='/BoikutloRamporaCV.pdf' download>
         <button className='desktopMenuBtn' >
-          <Image src={contact} alt='contact' className='desktopMenuImg ' />
+          <Image src={download} alt='download' className='desktopMenuImg ' />
           Download CV
         </button>
       </a>
