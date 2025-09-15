@@ -9,7 +9,7 @@ const Contact = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    setResult(<Image src={sending} alt="Sending...." className='sending-gif'/>);
+    setResult(<Image src={sending} alt="Sending...." className='sending-gif' />);
     const formData = new FormData(event.target);
 
     formData.append("access_key", "cb664fc8-02da-4f86-8394-117c2cc8cb6f");
@@ -34,7 +34,7 @@ const Contact = () => {
       try {
         const res = await fetch('https://boikutloportfolioapi.azurewebsites.net/api/Owner/2');
         const data = await res.json();
-        setContact(data[0]); 
+        setContact(data[0]);
       } catch (error) {
         console.error('Failed to fetch contact data:', error);
         alert('Failed to fetch contact data. Please try again later.');
@@ -46,58 +46,59 @@ const Contact = () => {
 
     <div className='contact'>
 
-        {/* Contact Form */}
-        <div className='contactCol'>
-          <div className='contactItem'>
-            <h2>Contact Information</h2>
-            <p>Interested in working together? Reach out and I’ll respond as soon as possible.</p>
-            {contact ? (
-              <ul>
-                 <a href={contact.EmailURL} target='blank' rel='nonopener nonreferrer'>
-                  <li> <Email /> Email</li>
-                </a>
-                <a href={`tel"${contact.EmailURL}`} target='blank' rel='nonopener nonreferrer' >
-                  <li> <Phone /> {contact.PhoneNumber || '+27 72 873 5988'} </li>
-                </a>
-                <a href={contact.GitHub} target='blank' rel='nonopener nonreferrer' >
+      {/* Contact links */}
+      <div className='contactCol'>
+        <div className='contactItem'>
+          <h2>Contact Information</h2>
+          <p>Interested in working together? Reach out and I’ll respond as soon as possible.</p>
+          {contact ? (
+            <ul>
+              <a href={`mailto:${contact.EmailURL}`} target='blank' rel='noopener nonreferrer'>
+                <li> <Email /> Email</li>
+              </a>
+
+              <a href={`tel:${contact.PhoneNumber}`} target='blank' rel='noopener nonreferrer' >
+                <li> <Phone /> {contact.PhoneNumber } </li>
+              </a>
+
+              <a href={contact.GitHub} target='blank' rel='noopener nonreferrer' >
                 <li> <GitHub /> GitHub</li>
-                </a>
-                <a href={contact.LinkedInURL} target='blank' rel='nonopener nonreferrer' >
+              </a>
+
+              <a href={contact.LinkedInURL} target='blank' rel='noopener nonreferrer' >
                 <li> <LinkedIn /> LinkedIn </li>
-                </a>
-              </ul>
-            ) : (<p>Loading contact info..</p>)}
-          </div>
-        </div>
-
-
-        {/* Contact Form */}
-        <div className='contactCol'>
-
-          <div className='contactItem'>
-
-            <h2>Should you have any business or queries</h2>
-            <form onSubmit={onSubmit} id="contact">
-              <label>Your Name</label>
-              <input type="text" placeholder='Enter your name' name="name" required />
-
-              <label>Email Address</label>
-              <input type="email" placeholder='Enter your email address' name="email" required />
-
-              <label>Message</label>
-              <textarea placeholder='Enter your message' name="message" rows="4" required></textarea>
-
-              <button type="submit" className='desktopMenuBtn'>
-                Submit Now 
-              </button>
-            </form>
-            <p>{result}</p>
-
-          </div>
+              </a>
+            </ul>
+          ) : (<p>Loading contact info..</p>)}
         </div>
       </div>
 
-   
+
+      {/* Contact Form */}
+      <div className='contactCol'>
+
+        <div className='contactItem'>
+          <form onSubmit={onSubmit} id="contact">
+            <label>Your Name</label>
+            <input type="text" placeholder='Enter your name' name="name" required />
+
+            <label>Email Address</label>
+            <input type="email" placeholder='Enter your email address' name="email" required />
+
+            <label>Message</label>
+            <textarea placeholder='Enter your message' name="message" rows="4" required></textarea>
+
+            <button type="submit" className='desktopMenuBtn'>
+              Submit Now
+            </button>
+          </form>
+          <p>{result}</p>
+
+        </div>
+      </div>
+    </div>
+
+
 
 
 
