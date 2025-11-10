@@ -3,6 +3,8 @@ import { GitHub, Email, LinkedIn, Phone } from '@mui/icons-material';
 import Image from 'next/image';
 import sending from './assets/sendingEmail.gif';
 
+import { Button } from '@mui/material';
+
 const Contact = () => {
   const [contact, setContact] = useState(null);
   const [result, setResult] = useState("");
@@ -87,10 +89,9 @@ const Contact = () => {
 
             <label>Message</label>
             <textarea placeholder='Enter your message' name="message" rows="4" required></textarea>
-
-            <button type="submit" className='desktopMenuBtn'>
+            <Button variant="contained" color="primary" href="#contact" type="submit">
               Submit Now
-            </button>
+            </Button>
           </form>
           <p>{result}</p>
 

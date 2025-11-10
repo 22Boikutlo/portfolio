@@ -1,7 +1,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import project from './assets/project.png';
 
@@ -22,15 +21,17 @@ function Projects() {
   return (
     <div id="projects">
       <div className="container">
-        <h1 className='skills-title'> <Image src={project} alt='project' className='heading-icon'/>Projects</h1>
+        <h1 className='skills-title'>Projects</h1>
         <div  className="projects">
+
           <div className="project-item">
             <h2>{projects.first?.ProjectName}</h2>
             <p>{projects.first?.ProjectDescription}</p>
-            <Button variant="contained" color="primary" href={projects.first?.ProjectURL} target="_blank" rel="noopener noreferrer">
+            <Button variant="contained" color="warning" href={projects.first?.ProjectURL} target="_blank" rel="noopener noreferrer">
               View Project
             </Button>
           </div>
+
           <div className="project-item">
             <h2>{projects.second?.ProjectName}</h2>
             <p>{projects.second?.ProjectDescription}</p>
@@ -46,6 +47,7 @@ function Projects() {
               View Project
             </Button>
           </div>
+
         </div>
       </div>
     </div>

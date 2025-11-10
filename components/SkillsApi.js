@@ -47,7 +47,7 @@ const Skills = () => {
   return (
     <div id="skills" className="skills">
       <div className="container">
-       <h1 className='skills-title'> <Image src={skill} alt='skill' className='heading-icon'/>Skills</h1>       
+       <h1 className='skills-title'> Skills</h1>       
 
         <Swiper
           modules={[Navigation, Pagination, Scrollbar, A11y]}

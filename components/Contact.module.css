@@ -69,3 +69,11 @@
   background-color: var(--hover-bg);
   transform: translateX(-10px);
 }
+.submitBtn {
+     color: yellow;
+    border-bottom: 3px solid yellow;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

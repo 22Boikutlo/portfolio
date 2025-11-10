@@ -20,7 +20,7 @@ const Education = () => {
   return (
     <div id="education" className="education-timeline">
       <div className="container">
-        <h1><SchoolIcon /> Education</h1>
+        <h1 className='skills-title'>Education</h1>
         <div className="timeline">
           {educationList.map((edu, index) => (
             <div className="timeline-item" key={index}>
