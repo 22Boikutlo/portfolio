@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import SchoolIcon from '@mui/icons-material/School';
 
 const Education = () => {
   const [educationList, setEducationList] = useState([]);
