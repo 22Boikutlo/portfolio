@@ -6,9 +6,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
-import Image from 'next/image';
-import skill from './assets/skill.png';
-
 const Skills = () => {
   const [skills, setSkills] = useState([]);
   const [error, setError] = useState(null);

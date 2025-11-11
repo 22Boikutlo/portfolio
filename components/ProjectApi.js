@@ -1,8 +1,6 @@
 import React from 'react';
 import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
-import project from './assets/project.png';
 
 function Projects() {
   const [projects, setProjects] = useState([]);
@@ -18,16 +16,16 @@ function Projects() {
     }
     fetchProjects();
   }, []);
+  
   return (
-    <div id="projects">
-      <div className="container">
+    <div className="container">
         <h1 className='skills-title'>Projects</h1>
         <div  className="projects">
 
           <div className="project-item">
             <h2>{projects.first?.ProjectName}</h2>
             <p>{projects.first?.ProjectDescription}</p>
-            <Button variant="contained" color="warning" href={projects.first?.ProjectURL} target="_blank" rel="noopener noreferrer">
+            <Button variant="contained" color="black" href={projects.first?.ProjectURL} target="_blank" rel="noopener noreferrer">
               View Project
             </Button>
           </div>
@@ -35,7 +33,7 @@ function Projects() {
           <div className="project-item">
             <h2>{projects.second?.ProjectName}</h2>
             <p>{projects.second?.ProjectDescription}</p>
-            <Button variant="contained" color="primary" href={projects.second?.ProjectURL} target="_blank" rel="noopener noreferrer" >
+            <Button variant="contained" color="black" href={projects.second?.ProjectURL} target="_blank" rel="noopener noreferrer" >
               View Project
             </Button>
           </div>
@@ -43,13 +41,12 @@ function Projects() {
           <div className="project-item">
             <h2>{projects.third?.ProjectName}</h2>
             <p>{projects.third?.ProjectDescription}</p>
-            <Button variant="contained" color="primary" href={projects.third?.ProjectURL}target="_blank" rel="noopener noreferrer" >
+            <Button variant="contained" color="black" href={projects.third?.ProjectURL}target="_blank" rel="noopener noreferrer" >
               View Project
             </Button>
           </div>
 
         </div>
-      </div>
     </div>
   );
 }

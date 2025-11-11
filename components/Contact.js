@@ -46,7 +46,9 @@ const Contact = () => {
   }, []);
   return (
 
-    <div className='contact'>
+    <div className='container'>
+      <h1 className='skills-title'>Contact Me</h1>
+      <div className='contact'>
 
       {/* Contact links */}
       <div className='contactCol'>
@@ -89,7 +91,7 @@ const Contact = () => {
 
             <label>Message</label>
             <textarea placeholder='Enter your message' name="message" rows="4" required></textarea>
-            <Button variant="contained" color="primary" href="#contact" type="submit">
+            <Button variant="contained" color="dark" href="#contact" type="submit">
               Submit Now
             </Button>
           </form>
@@ -98,7 +100,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
-
+</div>
 
 
 

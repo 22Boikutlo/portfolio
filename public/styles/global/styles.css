@@ -124,6 +124,54 @@ a{
     }
 }
 
+/*-------------Hero------*/
+.hero{
+    width:100%;
+    min-height: 60vh;
+    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('/images/profile.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0.25rem;
+    
+}
+.heroText{
+    text-align: center;
+    max-width: 800px;
+}
+.heroText h1{
+    font-size: 60px;
+    font-weight: 600;
+    
+}
+.heroText p{
+    max-width: 700px;
+    margin: 0 auto 20px;
+    line-height: 1.4;
+}
+/*--------media queries----*/
+@media(max-width: 850px){
+    .heroText h1{
+        font-size: 40px;
+    }
+}
+@media(max-width: 650px){
+    .heroText h1{
+        font-size: 30px;
+        max-width: 400px;
+        margin: auto;
+    }  
+    .heroText p{
+        font-size: 14px;
+        margin: 15px auto 30px;
+    }
+}
+
+
+
 /* Ensure sections are not hidden behind the fixed navbar */
 section {
   scroll-margin-top: 70px;
@@ -277,7 +325,9 @@ section {
   display: flex;
  
 }
-a li{color: black;}
+a li{
+  color: black;
+}
 .project-item {
   background-color: var(--light-bg);
   border-radius: var(--border-radius);
@@ -384,51 +434,7 @@ a li{color: black;}
   
 
  
-/*-------------Hero------*/
-.hero{
-    width:100%;
-    min-height: 60vh;
-    background: linear-gradient(rgba(8,0,58,0.7),rgba(8,0,58,0.7)), url('/images/profile.jpeg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 0.25rem;
-    
-}
-.heroText{
-    text-align: center;
-    max-width: 800px;
-}
-.heroText h1{
-    font-size: 60px;
-    font-weight: 600;
-    
-}
-.heroText p{
-    max-width: 700px;
-    margin: 0 auto 20px;
-    line-height: 1.4;
-}
-/*--------media queries----*/
-@media(max-width: 850px){
-    .heroText h1{
-        font-size: 40px;
-    }
-}
-@media(max-width: 650px){
-    .heroText h1{
-        font-size: 30px;
-        max-width: 400px;
-        margin: auto;
-    }  
-    .heroText p{
-        font-size: 14px;
-        margin: 15px auto 30px;
-    }
-}
+
 /*-------------Contact------*/
 
 .contact{
@@ -480,6 +486,25 @@ a li{color: black;}
 .contact-col span{
     display: block;
     margin: 20px 0;
+    .contactItem li {
+      list-style: none;
+      margin: 0.5rem 0;
+      transition: var(--transition);
+    }
+    
+    .contactItem li:hover {
+      background-color: var(--hover-bg);
+      transform: translateX(-10px);
+    }
+    .submitBtn {
+      background-color: yellow;
+         border-bottom: 3px solid yellow;
+         color:#fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
 }
 /*--------media queries----*/
 @media(max-width: 700px){
@@ -491,25 +516,6 @@ a li{color: black;}
     }
 }
 
-.contactItem li {
-  list-style: none;
-  margin: 0.5rem 0;
-  transition: var(--transition);
-}
-
-.contactItem li:hover {
-  background-color: var(--hover-bg);
-  transform: translateX(-10px);
-}
-.submitBtn {
-  background-color: yellow;
-     border-bottom: 3px solid yellow;
-     color:#fff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 @media (max-width: 768px) {
   .swiper-button-next,
   .swiper-button-prev {
