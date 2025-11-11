@@ -45,7 +45,7 @@ const Privacy = () => {
         You can request access to or deletion of any personal data collected by
         contacting{" "}
         <a href="mailto:Boikutlos@gmail.com" className="legal-link">
-          [YourEmail@example.com]
+          Boikutlo Shaun Rampora
         </a>
         .
       </p>

@@ -6,9 +6,6 @@ import ProjectApi from '@/components/ProjectApi';
 import Footers from '@/components/Footers';
 import Contact from '@/components/Contact';
 import About from '@/components/About';
-import TermsOfUse from '@/components/TermsOfUse';
-import Privacy from '@/components/Privacy';
-
 
 
 export default function Home() {
@@ -31,9 +28,7 @@ export default function Home() {
         <section id="contact"><Contact /></section>
         <section id="footer"><Footers /></section>
       </main>
-      <TermsOfUse />
-      <Privacy />
-    </>
+      </>
   );
 }
 
