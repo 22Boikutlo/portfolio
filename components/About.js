@@ -9,8 +9,8 @@ const Hero = () => {
         setOwner(data[0]);
       } catch (error) {
         alert('Failed to fetch owner data. Please try again later.');
-        // Optionally log the error for debugging
-        console.error('Failed to fetch owner data:');
+        // Log the error for debugging
+        console.error('Failed to fetch owner data:', error);
       }
     }
     useEffect(() => {
