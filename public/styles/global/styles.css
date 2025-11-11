@@ -575,3 +575,16 @@ a li{
 
 
 /********privacy policy ***************/
+/*.timeline{
+  position: relative;
+  animation-name: myAnimation;
+  animation-duration: 4s;
+}
+
+@keyframes myAnimation {
+  0%   {background-color:gray; left:0px; top:0px;}
+  25%  {background-color:gray; left:150px; top:0px;}
+  50%  {background-color:gray; left:150; top:150px;}
+  75%  {background-color:gray; left:0px; top:150px;}
+  100% {background-color:gray; left:0px; top:0px;}
+}*/
