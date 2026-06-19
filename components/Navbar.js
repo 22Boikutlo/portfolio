@@ -30,8 +30,8 @@ const Navbar = () => {
         <Link activeClass='active' to='skills' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Skills </Link>
         <Link activeClass='active' to='projects' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Projects </Link>
         <Link activeClass='active' to='contact' spy={true} smooth={true} offset={-50} duration={500} className='desktopMenuListItem'>Contact </Link>
-      </div>
-      <a href='/BoikutloRamporaCV.pdf' download>
+      </div> 
+      <a href='/BoikutloShaunRamporaCV050626.pdf' download>
         <button className='desktopMenuBtn' >
           <Image src={download} alt='download' className='desktopMenuImg ' />
           Download CV
